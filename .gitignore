@@ -1,0 +1,26 @@
+# Python / local env
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Non-essential backup/copy exports
+backup/
+backup copy/
+backup fernando/
+zzz/
+jacque/backup/
+jacque/backup fernando/
+jacque/original/
+jacque/original copy/
+jacque/original copy 2/
+
+# Duplicate top-level html copies
+* copy.html
+
+# Keep only core site files at root + assets/images
+# (other files can still be force-added manually if needed)
