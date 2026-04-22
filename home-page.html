@@ -102,6 +102,75 @@
   .sib-header {z-index:90;}
   .m .sib-header {height:1px;}
   .d .sib-header {height:1px;}
+
+  /* ── NAVBAR CUSTOM ── */
+  #navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(41,38,36,0.55) 100%);
+  }
+  #navbar-custom .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: relative;
+  }
+  #navbar-custom .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  #navbar-custom .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  #navbar-custom .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  #navbar-custom a.nav-link {
+    font-family: 'Overpass', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  #navbar-custom a.nav-link:hover { opacity: 0.7; }
+
+  /* TABLET (≤1024px) */
+  @media (max-width: 1024px) {
+    #navbar-custom .nav-inner { height: 80px; padding: 0 20px; }
+    #navbar-custom .nav-left, #navbar-custom .nav-right { gap: 24px; }
+    #navbar-custom a.nav-link { font-size: 11px; letter-spacing: 0.12em; }
+    #navbar-custom .nav-logo img { height: 56px; }
+  }
+
+  /* MOBILE (≤768px) */
+  @media (max-width: 768px) {
+    #navbar-custom .nav-inner { height: 64px; padding: 0 16px; justify-content: center; }
+    #navbar-custom .nav-left, #navbar-custom .nav-right { display: none; }
+    #navbar-custom .nav-logo { position: static; transform: none; margin: 0 auto; }
+    #navbar-custom .nav-logo img { height: 48px; }
+  }
+
+  /* Esconder o header Showit — usando navbar custom */
+  #header { display: none !important; }
   .m .sib-header .ss-bg {background-color:rgba(0,0,0,0);}
   .d .sib-header .ss-bg {background-color:rgba(0,0,0,0);}
   .d .sie-header_0 {left:0px;top:-1px;width:1200px;height:155px;}
@@ -1961,6 +2030,23 @@ img {
     <body>
       
       
+    <nav id="navbar-custom">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#manual-posts" class="nav-link">Galleries</a>
+          <a href="#wedding" class="nav-link">Wedding</a>
+        </div>
+        <a href="#hero" class="nav-logo">
+          <img src="https://images-pw.pixieset.com/profile/783083/4660b3aebb60a41abcadc0f362c6ffb9e622b004abae483035fe06cab98d1cb3.png" alt="Jacque Prates" style="height:74px;width:auto;display:block;" />
+        </a>
+        <div class="nav-right">
+          <a href="#freebie" class="nav-link">Investment</a>
+          <a href="journey.html" class="nav-link">Journey</a>
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+      </div>
+    </nav>
       <div id="si-sp" class="sp">
   <!-- <div id="hamburger-menu" data-bid="hamburger-menu" class="sb sib-hamburger-menu sb-lm sb-ld"> -->
   <div class="ss-s ss-bg">
