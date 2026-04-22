@@ -1141,10 +1141,36 @@
   .logos-roll {background:#2f2c26;padding:52px 0;overflow:hidden;}
   .logos-roll__inner {max-width:none;margin:0 auto;}
   .logos-roll__marquee {display:flex;align-items:center;justify-content:center;width:100%;}
+  .logos-roll__mobile {display:none;}
   .logos-roll__strip {display:block;
     height:auto;width:auto;max-width:none;
     opacity:0.88;transform:scale(0.67);
     transform-origin:center;}
+
+  @media (max-width: 767px) {
+    .logos-roll {padding:28px 0 !important;overflow:hidden !important;background:#31302b !important;}
+    .logos-roll__marquee {display:none !important;}
+    .logos-roll__mobile {
+      display:grid !important;
+      grid-template-columns:1fr 1fr !important;
+      gap:12px !important;
+      width:100% !important;
+      padding:0 16px !important;
+      box-sizing:border-box !important;
+    }
+    .logos-roll__mobile img {
+      width:100% !important;
+      height:auto !important;
+      object-fit:contain !important;
+      opacity:0.9 !important;
+      display:block !important;
+    }
+    .logos-roll__mobile img:last-child {
+      grid-column:1 / -1 !important;
+      max-width:50% !important;
+      margin:0 auto !important;
+    }
+  }
 
   @media (max-width: 1024px) {
     .journey-testimonial {padding:70px 24px 76px;}
@@ -1323,8 +1349,10 @@
     .stats-cards__value {font-size:52px;}
 
     .logos-roll {padding:38px 0;}
-    .logos-roll__marquee {justify-content:center;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
-    .logos-roll__strip {transform:none;width:auto;min-width:600px;height:80px;object-fit:contain;opacity:0.88;}
+    .logos-roll__marquee {display:none !important;}
+    .logos-roll__mobile {display:grid !important;grid-template-columns:1fr 1fr !important;gap:12px !important;width:100% !important;padding:0 16px !important;box-sizing:border-box !important;}
+    .logos-roll__mobile img {width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.9 !important;display:block !important;}
+    .logos-roll__mobile img:last-child {grid-column:1 / -1 !important;max-width:50% !important;margin:0 auto !important;}
   }
 
         
@@ -1742,29 +1770,70 @@ img {
   }
 
   /* ===== LOGOS strip — mobile e tablet ===== */
-  /* Mobile: scroll horizontal para ver todos os logos */
+  /* Mobile: logos empilhados em 3 linhas */
   @media (max-width: 767px) {
     .logos-roll {
-      padding: 38px 0 !important;
+      padding: 28px 0 !important;
       overflow: hidden !important;
+      background: #31302b !important;
     }
-    .logos-roll__marquee {
-      justify-content: flex-start !important;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
-      -webkit-overflow-scrolling: touch !important;
+    .logos-roll__inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0 !important;
       width: 100% !important;
     }
-    .logos-roll__strip {
-      transform: none !important;
-      width: auto !important;
-      min-width: 640px !important;
-      height: 80px !important;
-      max-width: none !important;
+    .logos-roll__marquee {
+      display: none !important;
+    }
+    .logos-roll__mobile {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: auto auto !important;
+      gap: 12px !important;
+      width: 100% !important;
+      padding: 0 16px !important;
+      box-sizing: border-box !important;
+    }
+    .logos-roll__mobile img {
+      width: 100% !important;
+      height: auto !important;
       object-fit: contain !important;
-      opacity: 0.88 !important;
+      opacity: 0.9 !important;
       display: block !important;
     }
+    .logos-roll__mobile img:last-child {
+      grid-column: 1 / -1 !important;
+      max-width: 50% !important;
+      margin: 0 auto !important;
+    }
+  }
+
+  /* Showit mobile class override */
+  .m .logos-roll__marquee {
+    display: none !important;
+  }
+  .m .logos-roll__mobile {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+  .m .logos-roll__mobile img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    opacity: 0.9 !important;
+    display: block !important;
+  }
+  .m .logos-roll__mobile img:last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
   }
 
   /* Tablet: imagem cabe na viewport */
@@ -2457,6 +2526,11 @@ img {
   <div class="logos-roll__inner">
   <div class="logos-roll__marquee">
   <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
+  </div>
+  <div class="logos-roll__mobile">
+    <img src="img/logo-strip-1_500x200.png" alt="Awards and publications logos row 1"/>
+    <img src="img/logo-strip-2_500x200.png" alt="Awards and publications logos row 2"/>
+    <img src="img/logo-strip-3_500x200.png" alt="Awards and publications logos row 3"/>
   </div>
   </div>
   </section>
