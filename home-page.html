@@ -2523,17 +2523,22 @@ img {
 
   <style>
     /* ── Testimonials: smooth crossfade transition ── */
+    #testimonials {
+      position: relative;
+    }
     #testimonials .ss.sis-testimonials_view-1,
     #testimonials .ss.sis-testimonials_view-1-1,
     #testimonials .ss.sis-testimonials_view-1-2 {
       position: absolute !important;
       top: 0; left: 0; width: 100%;
       opacity: 0;
-      transition: opacity 0.65s ease;
+      visibility: hidden;
+      transition: opacity 0.65s ease, visibility 0.65s ease;
       pointer-events: none;
     }
     #testimonials .ss.sactive {
       opacity: 1 !important;
+      visibility: visible !important;
       pointer-events: auto !important;
     }
     /* Arrow buttons: smooth hover + click feedback */
