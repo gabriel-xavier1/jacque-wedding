@@ -1220,9 +1220,10 @@
     .logos-roll {padding:28px 0 !important;overflow:hidden !important;background:#31302b !important;}
     .logos-roll__marquee {display:none !important;}
     .logos-roll__mobile {
-      display:grid !important;
-      grid-template-columns:1fr 1fr !important;
-      gap:12px !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:flex-start !important;
+      gap:16px !important;
       width:100% !important;
       padding:0 16px !important;
       box-sizing:border-box !important;
@@ -1235,9 +1236,8 @@
       display:block !important;
     }
     .logos-roll__mobile img:last-child {
-      grid-column:1 / -1 !important;
-      max-width:50% !important;
-      margin:0 auto !important;
+      max-width:100% !important;
+      margin:0 !important;
     }
   }
 
@@ -1857,12 +1857,12 @@ img {
       display: none !important;
     }
     .logos-roll__mobile {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      grid-template-rows: auto auto !important;
-      gap: 12px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 16px !important;
       width: 100% !important;
-      padding: 0 16px !important;
+      padding: 0 4px !important;
       box-sizing: border-box !important;
     }
     .logos-roll__mobile img {
@@ -1873,9 +1873,8 @@ img {
       display: block !important;
     }
     .logos-roll__mobile img:last-child {
-      grid-column: 1 / -1 !important;
-      max-width: 50% !important;
-      margin: 0 auto !important;
+      max-width: 100% !important;
+      margin: 0 !important;
     }
   }
 
@@ -1884,12 +1883,12 @@ img {
     display: none !important;
   }
   .m .logos-roll__mobile {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
     width: 100% !important;
-    padding: 0 16px !important;
+    padding: 0 4px !important;
     box-sizing: border-box !important;
   }
   .m .logos-roll__mobile img {
@@ -1900,9 +1899,8 @@ img {
     display: block !important;
   }
   .m .logos-roll__mobile img:last-child {
-    grid-column: 1 / -1 !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
   /* Tablet: imagem cabe na viewport */
@@ -2613,9 +2611,9 @@ img {
   <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
   </div>
   <div class="logos-roll__mobile">
-    <img src="https://i.postimg.cc/BbdNy2nv/logo-strip-1-500x200.png" alt="Awards and publications logos row 1"/>
-    <img src="https://i.postimg.cc/mkc88mBH/logo-strip-2-500x200.png" alt="Awards and publications logos row 2"/>
-    <img src="https://i.postimg.cc/KjdQVt88/logo-strip-3-500x200.png" alt="Awards and publications logos row 3"/>
+    <img src="images/logos/logo-strip-1_600x500.png" alt="Awards and publications logos row 1"/>
+    <img src="images/logos/logo-strip-2_600x500.png" alt="Awards and publications logos row 2"/>
+    <img src="images/logos/logo-strip-3_1080x1920.png" alt="Awards and publications logos row 3"/>
   </div>
   </div>
   </section>
