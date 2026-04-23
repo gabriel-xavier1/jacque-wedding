@@ -1581,6 +1581,73 @@ img {
   transform: rotate(180deg) !important;
 }
 
+/* ===== HERO: centralizar texto no mobile ===== */
+@media (max-width: 767px) {
+  /* Esconde os elementos originais do Showit no mobile */
+  .m .sie-hero_0,
+  .m .sie-hero_1,
+  .m .sie-hero_2 {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  /* Mostra o overlay centralizado */
+  .hero-mobile-overlay {
+    display: flex !important;
+  }
+}
+/* Overlay escondido por padrão */
+.hero-mobile-overlay {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+.hero-mobile-overlay h1 {
+  margin: 0 0 4px 0;
+  color: #fff;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero-mobile-overlay h2 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero-mobile-overlay a {
+  pointer-events: auto;
+  text-decoration: none;
+}
+.hero-mobile-overlay button {
+  background: #c6a07c !important;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 2.5em !important;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 /* ===== TABLET: About section only (800px - 1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -2340,6 +2407,16 @@ img {
   </div>
   </div>
   </div>
+
+  <!-- Hero mobile overlay — centralizado, só aparece no mobile -->
+  <div class="hero-mobile-overlay">
+    <h1>For The Real</h1>
+    <h2>Journey</h2>
+    <a href="journey.html" target="_blank">
+      <button type="button">Let's do it?</button>
+    </a>
+  </div>
+
   <section class="journey-editorial" aria-labelledby="journey-editorial-title">
   <div class="journey-editorial__inner">
   <p class="journey-editorial__eyebrow">First Things First....</p>
@@ -3021,6 +3098,42 @@ img {
       
       
       <!-- 8_ztnrncg2pb7dkkxphlvg/20260309111713Swd855v/hw1btCl9c -->
+
+  <script>
+    /* Hero mobile centering — runs after Showit renders */
+    (function centerHeroMobile() {
+      if (window.innerWidth > 767) return;
+      function applyCenter() {
+        var heroBlock = document.getElementById('hero');
+        if (!heroBlock) return;
+        // Já injetado?
+        if (heroBlock.querySelector('.hero-mobile-overlay')) return;
+
+        // Esconde elementos originais
+        var els = ['hero_0','hero_1','hero_2'];
+        els.forEach(function(id) {
+          var el = document.querySelector('[data-sid="'+id+'"]');
+          if (el) { el.style.opacity = '0'; el.style.pointerEvents = 'none'; }
+        });
+
+        // Cria overlay centralizado
+        var overlay = document.createElement('div');
+        overlay.className = 'hero-mobile-overlay';
+        overlay.style.cssText = 'position:absolute;bottom:80px;left:0;right:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;';
+        overlay.innerHTML = '<h1 style="margin:0 0 4px;color:#fff;font-family:\'Instrument Serif\',serif;font-size:42px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,0.5);">For The Real</h1>'
+          + '<h2 style="margin:0 0 24px;color:#fff;font-family:\'Allura\',cursive;font-size:80px;font-weight:400;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,0.5);">Journey</h2>'
+          + '<a href="journey.html" target="_blank" style="text-decoration:none;">'
+          + '<button style="background:#c6a07c;color:#fff;border:none;border-radius:8px;padding:0.85em 2.8em;font-size:16px;font-weight:700;font-family:\'Instrument Sans\',Arial,sans-serif;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Let\'s do it?</button>'
+          + '</a>';
+
+        heroBlock.style.position = 'relative';
+        heroBlock.appendChild(overlay);
+      }
+      applyCenter();
+      setTimeout(applyCenter, 500);
+      setTimeout(applyCenter, 1200);
+    })();
+  </script>
     </body>
 
   </html>
