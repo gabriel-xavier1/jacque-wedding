@@ -1,10 +1,9 @@
   <!DOCTYPE html>
-  <html class="d" lang="en">
+  <html class="d" lang="">
     <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-      <title>Jacque Prates | Documentary Wedding Photographer</title>
-      <meta name="description" content="Documentary wedding photographer based in the UK. Capturing real moments, real emotions — so you never forget how it felt to be that in love." />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Journey</title>
         <link rel="preconnect" href="https://static.showit.co" />
       
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,75 +101,6 @@
   .sib-header {z-index:90;}
   .m .sib-header {height:1px;}
   .d .sib-header {height:1px;}
-
-  /* ── NAVBAR CUSTOM ── */
-  #navbar-custom {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(41,38,36,0.55) 100%);
-  }
-  #navbar-custom .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 107px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    position: relative;
-  }
-  #navbar-custom .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  #navbar-custom .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  #navbar-custom .nav-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  #navbar-custom a.nav-link {
-    font-family: 'Overpass', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,1);
-    text-decoration: none;
-    transition: opacity 0.3s;
-  }
-  #navbar-custom a.nav-link:hover { opacity: 0.7; }
-
-  /* TABLET (≤1024px) */
-  @media (max-width: 1024px) {
-    #navbar-custom .nav-inner { height: 80px; padding: 0 20px; }
-    #navbar-custom .nav-left, #navbar-custom .nav-right { gap: 24px; }
-    #navbar-custom a.nav-link { font-size: 11px; letter-spacing: 0.12em; }
-    #navbar-custom .nav-logo img { height: 56px; }
-  }
-
-  /* MOBILE (≤768px) */
-  @media (max-width: 768px) {
-    #navbar-custom .nav-inner { height: 64px; padding: 0 16px; justify-content: center; }
-    #navbar-custom .nav-left, #navbar-custom .nav-right { display: none; }
-    #navbar-custom .nav-logo { position: static; transform: none; margin: 0 auto; }
-    #navbar-custom .nav-logo img { height: 48px; }
-  }
-
-  /* Esconder o header Showit — usando navbar custom */
-  #header { display: none !important; }
   .m .sib-header .ss-bg {background-color:rgba(0,0,0,0);}
   .d .sib-header .ss-bg {background-color:rgba(0,0,0,0);}
   .d .sie-header_0 {left:0px;top:-1px;width:1200px;height:155px;}
@@ -462,12 +392,6 @@
   /* Force desktop centering for testimonials state containers. */
   .d #testimonials > .ss .sc,
   .d #testimonials > .ss-s .sc {width:1200px;max-width:1200px;margin:0 auto;position:relative;}
-  /* Force mobile width for testimonials state containers. */
-  .m #testimonials > .ss .sc,
-  .m #testimonials > .ss-s .sc {width:320px;max-width:320px;margin:0 auto;position:relative;}
-  /* Override inline width:1200px on the ss-s sc container in mobile */
-  .m #testimonials .ss-s .sc,
-  .m #testimonials .ss .sc {width:320px !important;max-width:320px !important;}
   .m .sib-testimonials .ss-bg {background-color:rgba(22,22,22,1);}
   .d .sib-testimonials .ss-bg {background-color:rgba(22,22,22,1);}
   .d .sie-testimonials_0 {left:94px;top:122px;width:1012px;height:17px;}
@@ -479,7 +403,7 @@
   .d .sie-testimonials_view-1_0 {left:318px;top:417px;width:562px;height:40px;}
   .m .sie-testimonials_view-1_0 {left:45px;top:430px;width:230px;height:25px;display:none;}
   .d .sie-testimonials_view-1_0-text {color:rgba(255,255,255,1);font-size:28px;letter-spacing:0.1em;text-align:center;}
-  .m .sie-testimonials_view-1_0-text {color:rgba(255,255,255,1);font-size:16px;text-align:center;}
+  .m .sie-testimonials_view-1_0-text {color:rgba(255,255,255,1);font-size:20px;text-align:center;}
   .d .sie-testimonials_view-1_1 {left:261px;top:177px;width:679px;height:220px;}
   .m .sie-testimonials_view-1_1 {left:23px;top:97px;width:270px;height:320px;}
   .d .sie-testimonials_view-1_1-text {color:rgba(255,255,255,1);font-size:1.4rem;line-height:1.9;text-align:center;}
@@ -489,7 +413,7 @@
   .d .sie-testimonials_view-1-1_0 {left:318px;top:417px;width:562px;height:40px;}
   .m .sie-testimonials_view-1-1_0 {left:45px;top:430px;width:230px;height:25px;display:none;}
   .d .sie-testimonials_view-1-1_0-text {color:rgba(255,255,255,1);font-size:28px;letter-spacing:0.1em;text-align:center;}
-  .m .sie-testimonials_view-1-1_0-text {color:rgba(255,255,255,1);font-size:16px;text-align:center;}
+  .m .sie-testimonials_view-1-1_0-text {color:rgba(255,255,255,1);font-size:20px;text-align:center;}
   .d .sie-testimonials_view-1-1_1 {left:261px;top:177px;width:679px;height:220px;}
   .m .sie-testimonials_view-1-1_1 {left:23px;top:97px;width:270px;height:320px;}
   .d .sie-testimonials_view-1-1_1-text {color:rgba(255,255,255,1);font-size:1.4rem;line-height:1.9;text-align:center;}
@@ -499,14 +423,14 @@
   .d .sie-testimonials_view-1-2_0 {left:318px;top:417px;width:562px;height:40px;}
   .m .sie-testimonials_view-1-2_0 {left:45px;top:430px;width:230px;height:25px;display:none;}
   .d .sie-testimonials_view-1-2_0-text {color:rgba(255,255,255,1);font-size:28px;letter-spacing:0.1em;text-align:center;}
-  .m .sie-testimonials_view-1-2_0-text {color:rgba(255,255,255,1);font-size:16px;text-align:center;}
+  .m .sie-testimonials_view-1-2_0-text {color:rgba(255,255,255,1);font-size:20px;text-align:center;}
   .d .sie-testimonials_view-1-2_1 {left:261px;top:177px;width:679px;height:220px;}
   .m .sie-testimonials_view-1-2_1 {left:21px;top:97px;width:278px;height:320px;}
   .d .sie-testimonials_view-1-2_1-text {color:rgba(255,255,255,1);font-size:1.4rem;line-height:1.9;text-align:center;}
   .m .sie-testimonials_view-1-2_1-text {color:rgba(255,255,255,1);font-size:16px;line-height:1.7;text-align:center;}
   .d .sie-testimonials_2 {left:24px;top:252px;width:32px;height:32px;}
   .m .sie-testimonials_2 {left:114px;top:366px;width:37px;height:28px;}
-  .sie-testimonials_2, .sie-testimonials_3 {cursor:pointer;z-index:70;-webkit-tap-highlight-color: transparent;outline: none;}
+  .sie-testimonials_2, .sie-testimonials_3 {cursor:pointer;z-index:70;}
   .d .sie-testimonials_r-y19MSMR_0 {left:0px;top:0px;width:46px;height:47px;}
   .m .sie-testimonials_r-y19MSMR_0 {left:0px;top:0px;width:37px;height:28px;}
   .d .r-y19MSMR:hover .sie-testimonials_r-y19MSMR_0 .se-simple {}
@@ -1024,65 +948,57 @@
   .d .sib-index-manual-posts {height:758px;}
   .m .sib-index-manual-posts .ss-bg {background-color:rgba(255,255,255,1);}
   .d .sib-index-manual-posts .ss-bg {background-color:rgba(255,255,255,1);}
-  /* Fix mobile container width */
-  .m #manual-posts .sc {width:320px !important;max-width:320px !important;}
   .d .sie-manual-posts_0:hover, .d .sie-manual-posts_1:hover, .d .sie-manual-posts_3:hover, .d .sie-manual-posts_4:hover, .d .sie-manual-posts_5:hover, .d .sie-manual-posts_6:hover {opacity:0.7;transition-duration:0.5s;transition-property:opacity;}
   .m .sie-manual-posts_0:hover, .m .sie-manual-posts_1:hover, .m .sie-manual-posts_3:hover, .m .sie-manual-posts_4:hover, .m .sie-manual-posts_5:hover, .m .sie-manual-posts_6:hover {opacity:0.7;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_0 {left:24px;top:193px;width:368px;height:366px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_0 {left:15px;top:104px;width:290px;height:290px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_0 {left:25px;top:104px;width:270px;height:270px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_0 .se-img, .m .sie-manual-posts_0 .se-img, .d .sie-manual-posts_3 .se-img, .m .sie-manual-posts_3 .se-img, .d .sie-manual-posts_5 .se-img, .m .sie-manual-posts_5 .se-img {background-repeat:no-repeat;background-size:cover;background-position:50% 50%;border-radius:inherit;}
   .d .sie-manual-posts_1 {left:24px;top:605px;width:368px;height:89px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_1 {left:15px;top:409px;width:290px;height:58px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_1 {left:25px;top:389px;width:270px;height:58px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_1-text {font-size:38px;text-align:center !important;}
-  .m .sie-manual-posts_1-text {font-size:22px;text-align:center !important;}
+  .m .sie-manual-posts_1-text {font-size:28px;}
   .d .sie-manual-posts_2 {left:24px;top:99px;width:320px;height:48px;}
-  .m .sie-manual-posts_2 {left:15px;top:40px;width:290px;height:55px;}
+  .m .sie-manual-posts_2 {left:25px;top:53px;width:270px;height:41px;}
   .d .sie-manual-posts_2-text {font-size:60px;margin-bottom:46px;}
-  .m .sie-manual-posts_2-text {font-size:52px;}
+  .m .sie-manual-posts_2-text {font-size:36px;}
   .d .sie-manual-posts_3 {left:416px;top:193px;width:368px;height:366px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_3 {left:15px;top:498px;width:290px;height:290px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_3 {left:25px;top:478px;width:270px;height:270px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_4 {left:416px;top:605px;width:368px;height:89px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_4 {left:15px;top:803px;width:290px;height:58px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_4 {left:25px;top:763px;width:270px;height:58px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_4-text {font-size:38px;text-align:center !important;}
-  .m .sie-manual-posts_4-text {font-size:22px;text-align:center !important;}
+  .m .sie-manual-posts_4-text {font-size:28px;}
   .d .sie-manual-posts_5 {left:808px;top:193px;width:368px;height:366px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_5 {left:15px;top:895px;width:290px;height:290px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_5 {left:25px;top:855px;width:270px;height:270px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_6 {left:808px;top:605px;width:368px;height:89px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-manual-posts_6 {left:15px;top:1200px;width:290px;height:58px;transition-duration:0.5s;transition-property:opacity;}
+  .m .sie-manual-posts_6 {left:25px;top:1140px;width:270px;height:58px;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-manual-posts_6-text {font-size:38px;text-align:center !important;}
-  .m .sie-manual-posts_6-text {font-size:22px;text-align:center !important;}
+  .m .sie-manual-posts_6-text {font-size:28px;}
   .d .sie-manual-posts_0 .se-img {background-image:url('https://i.postimg.cc/NjPzCHwP/steph_e_iain.png') !important;background-size:cover !important;background-position:center center !important;}
   .d .sie-manual-posts_3 .se-img {background-image:url('https://i.postimg.cc/dQpjd8r5/Joe-Sarka.png') !important;background-size:cover !important;background-position:center center !important;}
   .d .sie-manual-posts_5 .se-img {background-image:url('https://i.postimg.cc/gJ0yCMq1/Mr-Mrs-Scobell.png') !important;background-size:cover !important;background-position:center center !important;}
-  /* Mobile height adjustment for 3 galleries */
-  .m .sib-index-manual-posts {height:1310px !important;}
 
   .sib-index-freebie {z-index:41;}
   .m .sib-index-freebie {height:1030px;}
   .d .sib-index-freebie {height:740px;}
   .m .sib-index-freebie .ss-bg {background-color:rgba(244,239,233,1);}
   .d .sib-index-freebie .ss-bg {background-color:rgba(244,239,233,1);}
-  /* Fix mobile container width */
-  .m #freebie .sc {width:320px !important;max-width:320px !important;}
   .d .sie-freebie_0 {left:24px;top:70px;width:430px;height:620px;}
-  .m .sie-freebie_0 {left:15px;top:160px;width:290px;height:360px;display:block !important;}
+  .m .sie-freebie_0 {left:20px;top:150px;width:280px;height:430px;display:block !important;}
   .d .sie-freebie_0 .se-img {background-repeat:no-repeat;background-size:cover;background-position:50% 50%;border-radius:inherit;background-image:url('https://i.postimg.cc/qqvhR7sh/Chloe_Loius_366_2048x1365.jpg') !important;display:block !important;min-height:100% !important;}
   .m .sie-freebie_0 .se-img {background-repeat:no-repeat;background-size:cover;background-position:50% 50%;border-radius:inherit;background-image:url('https://i.postimg.cc/qqvhR7sh/Chloe_Loius_366_2048x1365.jpg') !important;display:block !important;min-height:100% !important;}
   .str-im[data-tran="freebie_0"], .sie-freebie_0 {display:block !important;opacity:1 !important;visibility:visible !important;}
   .d .sie-freebie_1 {left:520px;top:640px;width:172px;height:50px;}
-  .m .sie-freebie_1 {left:15px;top:1045px;width:290px;height:50px;}
+  .m .sie-freebie_1 {left:25px;top:930px;width:220px;height:50px;}
   .d .sie-freebie_1 .se-button {white-space:nowrap;width:auto;min-width:220px;}
   .d .sie-freebie_2 {left:520px;top:209px;width:560px;height:420px;}
-  .m .sie-freebie_2 {left:15px;top:545px;width:290px;height:480px;}
+  .m .sie-freebie_2 {left:25px;top:570px;width:270px;height:340px;}
   .d .sie-freebie_3 {left:520px;top:125px;width:560px;height:60px;}
-  .m .sie-freebie_3 {left:15px;top:84px;width:290px;height:67px;}
+  .m .sie-freebie_3 {left:25px;top:84px;width:209px;height:67px;}
   .d .sie-freebie_3-text {font-size:47px;}
-  .m .sie-freebie_3-text {font-size:52px;}
+  .m .sie-freebie_3-text {font-size:32px;}
   .d .sie-freebie_4:hover, .m .sie-freebie_4:hover {opacity:0.7;transition-duration:0.5s;transition-property:opacity;}
   .d .sie-freebie_4 {left:520px;top:80px;width:560px;height:21px;transition-duration:0.5s;transition-property:opacity;}
-  .m .sie-freebie_4 {left:15px;top:43px;width:249px;height:30px;transition-duration:0.5s;transition-property:opacity;}
-  /* Mobile section height to fit all content */
-  .m .sib-index-freebie {height:1120px !important;}
+  .m .sie-freebie_4 {left:25px;top:43px;width:249px;height:30px;transition-duration:0.5s;transition-property:opacity;}
 
   @media (prefers-reduced-motion: reduce) {
     .journey-video__frame {transform:none !important;}
@@ -1117,11 +1033,7 @@
   .journey-testimonial-2__text {margin:0;max-width:618px;color:#38342f;font-family:'Instrument Serif';font-size:26px;font-weight:400;line-height:1.4;letter-spacing:-0.003em;}
   .journey-testimonial-2__author {margin:22px 0 0;color:#2a2723;font-family:'Pinyon Script';font-size:32px;font-weight:400;font-style:normal;line-height:1;letter-spacing:0;text-align:left;}
   .journey-testimonial-2__media {width:100%;height:100%;margin:0;overflow:hidden;}
-  .journey-testimonial-2__image {display:block;width:100%;height:100%;min-height:430px;object-fit:cover;transform:scale(1.3);transition:transform 0.3s;}
-  @media (max-width: 767px) {
-    .journey-testimonial-2__media {height:auto !important;overflow:visible !important;}
-    .journey-testimonial-2__image {height:auto !important;min-height:0 !important;aspect-ratio:4/3;transform:none !important;}
-  }
+  .journey-testimonial-2__image {display:block;width:100%;height:100%;min-height:430px;object-fit:cover;}
 
   .journey-testimonial-3 {background:#ececeb;padding:86px 32px 92px;}
   .journey-testimonial-3__inner {max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0, 1.14fr) minmax(0, 1.14fr);gap:38px;align-items:center;}
@@ -1210,71 +1122,10 @@
   .logos-roll {background:#2f2c26;padding:52px 0;overflow:hidden;}
   .logos-roll__inner {max-width:none;margin:0 auto;}
   .logos-roll__marquee {display:flex;align-items:center;justify-content:center;width:100%;}
-  .logos-roll__mobile {display:none;}
-  @media (min-width: 768px) {
-    .logos-roll__mobile {display:none !important;}
-  }
-  @media (max-width: 767px) {
-    .logos-roll__mobile {display:flex !important;}
-  }
-  .m .logos-roll__mobile {display:flex !important;}
   .logos-roll__strip {display:block;
     height:auto;width:auto;max-width:none;
     opacity:0.88;transform:scale(0.67);
     transform-origin:center;}
-
-  @media (max-width: 767px) {
-    .logos-roll {padding:32px 0 !important;overflow:hidden !important;background:#31302b !important;}
-    .logos-roll__marquee {display:none !important;}
-    .logos-roll__mobile {
-      display:flex !important;
-      flex-direction:column !important;
-      align-items:stretch !important;
-      gap:20px !important;
-      width:100% !important;
-      padding:0 20px !important;
-      box-sizing:border-box !important;
-    }
-    /* Badges circulares lado a lado */
-    .logos-roll__mobile-badges {
-      display:flex !important;
-      flex-direction:row !important;
-      justify-content:center !important;
-      align-items:center !important;
-      gap:16px !important;
-    }
-    .logos-roll__mobile-badges img {
-      width:42% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      opacity:0.92 !important;
-      display:block !important;
-    }
-    /* Wedding Industry Awards — portrait, centralizado */
-    .logos-roll__mobile-finalist {
-      display:flex !important;
-      justify-content:center !important;
-    }
-    .logos-roll__mobile-finalist img {
-      width:52% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      opacity:0.92 !important;
-      display:block !important;
-    }
-    /* Strips wide — full width */
-    .logos-roll__mobile-strip {
-      display:flex !important;
-      justify-content:center !important;
-    }
-    .logos-roll__mobile-strip img {
-      width:100% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      opacity:0.92 !important;
-      display:block !important;
-    }
-  }
 
   @media (max-width: 1024px) {
     .journey-testimonial {padding:70px 24px 76px;}
@@ -1361,12 +1212,12 @@
 
     .journey-testimonial {padding:52px 18px 58px;}
     .journey-testimonial__inner {grid-template-columns:1fr;gap:22px;}
-    .journey-testimonial__quote {order:2;}
-    .journey-testimonial__media {width:88%;order:1;margin:0 auto;align-self:center;padding:0;box-sizing:border-box;}
+    .journey-testimonial__quote {order:1;}
+    .journey-testimonial__media {width:88%;order:2;margin:0 auto;align-self:center;padding:20px;box-sizing:border-box;}
     .journey-testimonial__image {max-width:100%;max-height:100%;height:auto;object-fit:contain;transform:none;}
     .journey-testimonial__mark {font-size:40px;margin-bottom:6px;}
     .journey-testimonial__quote {max-width:none;}
-    .journey-testimonial__text {font-size:22px;line-height:1.4;max-width:none;}
+    .journey-testimonial__text {font-size:16px;line-height:1.44;max-width:none;}
     .journey-testimonial__author {margin-top:16px;font-size:26px;}
     .journey-testimonial__cta-wrap {margin-top:22px;}
 
@@ -1389,8 +1240,8 @@
     .journey-testimonial-2__image {height:auto;min-height:0;aspect-ratio:4 / 3;}
     .journey-testimonial-2__mark {font-size:40px;margin-bottom:6px;}
     .journey-testimonial-2__quote {max-width:none;}
-    .journey-testimonial-2__wedding-heading {font-size:52px;line-height:1.1;margin-bottom:10px;}
-    .journey-testimonial-2__text {font-size:22px;line-height:1.4;max-width:none;}
+    .journey-testimonial-2__wedding-heading {font-size:32px;line-height:1.1;margin-bottom:10px;}
+    .journey-testimonial-2__text {font-size:16px;line-height:1.44;max-width:none;}
     .journey-testimonial-2__author {margin-top:16px;font-size:26px;}
 
     .journey-testimonial-3 {padding:52px 18px 58px;}
@@ -1453,8 +1304,6 @@
     .stats-cards__value {font-size:52px;}
 
     .logos-roll {padding:38px 0;}
-    .logos-roll__marquee {display:none !important;}
-    .logos-roll__mobile {display:none !important;}
   }
 
         
@@ -1478,657 +1327,14 @@
                                 </script>
       
     <style id="gl-editor-styles">
-/* ── Galleries: nome do casal — mobile only ── */
-@media (max-width: 767px) {
-  .m .sie-manual-posts_1-text,
-  .m .sie-manual-posts_4-text,
-  .m .sie-manual-posts_6-text {
-    font-size: 22px !important;
-  }
-}
-/* Block zoom and horizontal scroll */
-html, body {
-  overflow-x: hidden !important;
-  max-width: 100vw !important;
-  touch-action: pan-y !important;
-}
-/* Disable zoom on images and all elements */
-img, * {
-  touch-action: pan-y;
-  -webkit-user-select: none;
-  user-select: none;
-}
-img {
-  pointer-events: none;
-}
 .gl-1 {
   padding-bottom: 0px; padding-left: 0px;
 }
-
-/* Fix horizontal scroll on mobile */
-@media (max-width: 767px) {
-  html, body {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-  }
-  #si-sp {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-  }
-  /* Fix testimonials - center text and move arrows below */
-  .m .sie-testimonials_view-1_1,
-  .m .sie-testimonials_view-1-1_1,
-  .m .sie-testimonials_view-1-2_1 {
-    left: 16px !important;
-    top: 80px !important;
-    width: 288px !important;
-    height: auto !important;
-    min-height: 340px !important;
-  }
-  .m .sie-testimonials_view-1_1-text,
-  .m .sie-testimonials_view-1-1_1-text,
-  .m .sie-testimonials_view-1-2_1-text {
-    text-align: center !important;
-    font-size: 20px !important;
-    line-height: 1.6 !important;
-  }
-  .m .sie-testimonials_0-text {
-    text-align: center !important;
-    font-size: 13px !important;
-    letter-spacing: 0.12em !important;
-    line-height: 1.5 !important;
-  }
-  .m .sie-testimonials_view-1_0-text,
-  .m .sie-testimonials_view-1-1_0-text,
-  .m .sie-testimonials_view-1-2_0-text {
-    text-align: center !important;
-  }
-  .m .sie-testimonials_0 {
-    left: 16px !important;
-    width: 288px !important;
-    top: 38px !important;
-    height: auto !important;
-  }
-  /* Espaçamento entre título e texto do quote */
-  .m .sie-testimonials_view-1_1,
-  .m .sie-testimonials_view-1-1_1,
-  .m .sie-testimonials_view-1-2_1 {
-    top: 110px !important;
-  }
-  .m .sie-testimonials_2 {
-    left: calc(50% - 50px) !important;
-    top: 500px !important;
-    width: 44px !important;
-    height: 44px !important;
-  }
-  .m .sie-testimonials_3 {
-    left: calc(50% + 6px) !important;
-    top: 500px !important;
-    width: 44px !important;
-    height: 44px !important;
-  }
-  .m .sib-testimonials {
-    height: 590px !important;
-  }
-  /* Fix prev arrow direction */
-  .sie-testimonials_r-y19MSMR_1 svg {
-    transform: rotate(180deg) !important;
-  }
-}
-
-/* Fix prev arrow direction on desktop */
-.d .sie-testimonials_r-y19MSMR_1 svg {
-  transform: rotate(180deg) !important;
-}
-
-/* ===== TABLET: About section only (800px - 1024px) ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  /* ===== GLOBAL: Fix horizontal scroll and container width ===== */
-  html, body {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-  /* Force Showit main container to fill viewport */
-  #si-sp, .sp {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-  /* Force all Showit section blocks to fill viewport */
-  .sb {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow: hidden !important;
-  }
-  /* Force all .sc containers (inline width:1200px) to viewport width */
-  .sc {
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
-
-  /* ===== HEADER: Logo only, centered ===== */
-  /* Nav links hidden on tablet */
-  .d .sie-header_1, .d .sie-header_2, .d .sie-header_3,
-  .d .sie-header_4, .d .sie-header_5, .d .sie-header_6 {
-    display: none !important;
-  }
-  /* Logo hidden on tablet — centering not possible with 1200px fixed container */
-  .d .sie-header_8 {
-    display: none !important;
-  }
-
-  /* "Hi! am Jacque" title - reduce font so it doesn't overflow */
-  .journey-testimonial .journey-editorial__breath {
-    font-size: clamp(38px, 5.5vw, 65px) !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow: hidden !important;
-  }
-  /* Body text - slightly smaller to fit column */
-  .journey-testimonial__text {
-    font-size: clamp(16px, 2vw, 24px) !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-  }
-  /* Prevent the quote column from overflowing viewport */
-  .journey-testimonial__quote {
-    overflow: hidden !important;
-    min-width: 0 !important;
-  }
-  /* Prevent the whole section from overflowing */
-  .journey-testimonial {
-    overflow: hidden !important;
-  }
-
-  /* ===== TABLET: Hero section ===== */
-  /* Fix container */
-  .d .sib-hero .sc { width: 100vw !important; max-width: 100vw !important; }
-  /* "FOR THE REAL" text */
-  .d .sie-hero_0 { left: 10vw !important; width: 80vw !important; }
-  .d .sie-hero_0-text { font-size: clamp(60px, 9vw, 114px) !important; }
-  /* "Journey" */
-  .d .sie-hero_1 { left: 10vw !important; width: 80vw !important; }
-  /* Button */
-  .d .sie-hero_2 { left: 10vw !important; width: 80vw !important; }
-  /* Decorative images - hide on tablet to avoid overflow */
-  .d .sie-hero_4 { display: none !important; }
-  .d .sie-hero_5 { display: none !important; }
-
-  /* ===== TABLET: Testimonials ===== */
-  /* Container already 100vw from global fix */
-  /* Title */
-  .d .sie-testimonials_0 { left: 5vw !important; width: 90vw !important; }
-  .d .sie-testimonials_0-text { text-align: center !important; font-size: clamp(10px, 1.2vw, 14px) !important; }
-  /* Quote text - all 3 views */
-  .d .sie-testimonials_view-1_1,
-  .d .sie-testimonials_view-1-1_1,
-  .d .sie-testimonials_view-1-2_1 { left: 5vw !important; width: 90vw !important; }
-  .d .sie-testimonials_view-1_1-text,
-  .d .sie-testimonials_view-1-1_1-text,
-  .d .sie-testimonials_view-1-2_1-text {
-    font-size: clamp(15px, 1.8vw, 22px) !important;
-    text-align: center !important;
-    line-height: 1.7 !important;
-  }
-  /* Author name */
-  .d .sie-testimonials_view-1_0,
-  .d .sie-testimonials_view-1-1_0,
-  .d .sie-testimonials_view-1-2_0 { left: 5vw !important; width: 90vw !important; top: 360px !important; }
-  .d .sie-testimonials_view-1_0-text,
-  .d .sie-testimonials_view-1-1_0-text,
-  .d .sie-testimonials_view-1-2_0-text { text-align: center !important; }
-  /* Arrows - centered below author */
-  .d .sie-testimonials_2 { left: calc(50vw - 55px) !important; top: 420px !important; }
-  .d .sie-testimonials_3 { left: calc(50vw + 15px) !important; top: 420px !important; }
-  .d .sib-testimonials { height: 490px !important; }
-
-  /* ===== TABLET: Galleries (2+1 layout) ===== */
-  .d #manual-posts .sc { width: 100vw !important; max-width: 100vw !important; }
-  /* Title */
-  .d .sie-manual-posts_2 { left: 2vw !important; top: 20px !important; width: 50vw !important; }
-  .d .sie-manual-posts_2-text { font-size: clamp(32px, 5vw, 60px) !important; }
-  /* Row 1: photo 0 (left) + photo 3 (right) */
-  .d .sie-manual-posts_0 { left: 1vw !important; top: 110px !important; width: 47vw !important; height: 47vw !important; }
-  .d .sie-manual-posts_3 { left: 51vw !important; top: 110px !important; width: 47vw !important; height: 47vw !important; }
-  /* Row 1 names */
-  .d .sie-manual-posts_1 { left: 1vw !important; top: calc(47vw + 125px) !important; width: 47vw !important; height: 60px !important; }
-  .d .sie-manual-posts_4 { left: 51vw !important; top: calc(47vw + 125px) !important; width: 47vw !important; height: 60px !important; }
-  .d .sie-manual-posts_1-text,
-  .d .sie-manual-posts_4-text { font-size: clamp(18px, 2.8vw, 36px) !important; text-align: center !important; }
-  /* Row 2: photo 5 centered */
-  .d .sie-manual-posts_5 { left: 26.5vw !important; top: calc(47vw + 210px) !important; width: 47vw !important; height: 47vw !important; }
-  /* Row 2 name */
-  .d .sie-manual-posts_6 { left: 26.5vw !important; top: calc(94vw + 225px) !important; width: 47vw !important; height: 60px !important; }
-  .d .sie-manual-posts_6-text { font-size: clamp(18px, 2.8vw, 36px) !important; text-align: center !important; }
-  /* Section height */
-  .d .sib-index-manual-posts { height: calc(94vw + 320px) !important; }
-  /* Text size - slightly larger */
-  .journey-testimonial-2__text {
-    font-size: clamp(13px, 1.6vw, 18px) !important;
-    overflow: visible !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    max-width: 100% !important;
-  }
-  .journey-testimonial-2__wedding-heading {
-    font-size: clamp(24px, 3.2vw, 44px) !important;
-    word-break: normal !important;
-  }
-  .journey-testimonial-2__quote {
-    overflow: visible !important;
-    min-width: 0 !important;
-    max-width: 52vw !important;
-    flex-shrink: 1 !important;
-  }
-  /* Reduce photo size on tablet */
-  .journey-testimonial-2__media {
-    max-width: 38vw !important;
-    flex-shrink: 0 !important;
-  }
-  .journey-testimonial-2__image {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  /* Adjust grid columns - Wedding keeps equal columns with gap */
-  #wedding .journey-testimonial-2__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-    gap: 80px !important;
-    overflow: visible !important;
-  }
-  /* Investments - photo smaller, text gets more space */
-  #wedding ~ * .journey-testimonial-2__inner {
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr) !important;
-    gap: 40px !important;
-    overflow: visible !important;
-  }
-  /* Button - compact, not full width */
-  .journey-testimonial-2__cta-wrap {
-    display: block !important;
-    margin-top: 16px !important;
-  }
-  .journey-testimonial-2__cta-link {
-    display: inline-block !important;
-    width: auto !important;
-  }
-  .journey-testimonial-2__cta-link .se-button,
-  .journey-testimonial-2__cta-link .btn-square {
-    width: auto !important;
-    min-width: 140px !important;
-    max-width: 200px !important;
-    padding: 0.7em 1.6em !important;
-    display: inline-block !important;
-    font-size: clamp(10px, 1.2vw, 13px) !important;
-  }
-
-  /* ===== TABLET: Text boost — About, Wedding, Investments only ===== */
-
-  /* About section */
-  #about .journey-testimonial__text {
-    font-size: clamp(19px, 2.4vw, 26px) !important;
-  }
-  #about .journey-editorial__title {
-    font-size: clamp(36px, 4.5vw, 52px) !important;
-  }
-  #about .journey-editorial__body {
-    font-size: clamp(18px, 2.2vw, 24px) !important;
-  }
-  #about .journey-editorial__closing {
-    font-size: clamp(28px, 3.5vw, 40px) !important;
-  }
-  #about .journey-editorial__breath {
-    font-size: clamp(44px, 6.5vw, 72px) !important;
-  }
-
-  /* Wedding section */
-  #wedding .journey-testimonial-2__text {
-    font-size: clamp(18px, 2.2vw, 24px) !important;
-  }
-  #wedding .journey-testimonial-2__wedding-heading {
-    font-size: clamp(36px, 4.5vw, 52px) !important;
-  }
-
-  /* Investments section (#freebie) */
-  .sib-index-freebie .sie-freebie_3-text,
-  .sib-index-freebie .st-d-heading,
-  #freebie .sie-freebie_3-text {
-    font-size: clamp(36px, 4.5vw, 52px) !important;
-  }
-  #freebie .sie-freebie_2 .journey-testimonial-2__text,
-  .sib-index-freebie .journey-testimonial-2__text {
-    font-size: clamp(18px, 2.2vw, 24px) !important;
-  }
-
-  /* Fix Investments layout on tablet — reposition elements to fit viewport */
-  .d .sib-index-freebie .sc {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow: hidden !important;
-  }
-  /* Photo — left column */
-  .d .sie-freebie_0 {
-    left: 2vw !important;
-    width: 42vw !important;
-    height: 580px !important;
-  }
-  /* Eyebrow "How much will it cost?" */
-  .d .sie-freebie_4 {
-    left: 48vw !important;
-    width: 48vw !important;
-    top: 60px !important;
-  }
-  /* Title "Investments" */
-  .d .sie-freebie_3 {
-    left: 48vw !important;
-    width: 48vw !important;
-    top: 100px !important;
-  }
-  /* Body text */
-  .d .sie-freebie_2 {
-    left: 48vw !important;
-    width: 48vw !important;
-    top: 180px !important;
-    height: 380px !important;
-  }
-  /* Button */
-  .d .sie-freebie_1 {
-    left: 48vw !important;
-    top: 580px !important;
-  }
-  /* Section height */
-  .d .sib-index-freebie {
-    height: 680px !important;
-  }
-
-  /* Wedding photo — increase height to align with button */
-  #wedding .journey-testimonial-2__media {
-    min-height: 420px !important;
-    height: auto !important;
-    align-self: stretch !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  #wedding .journey-testimonial-2__image {
-    min-height: 420px !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-
-  /* "What the most amazing people say" — Showit testimonials block */
-  .d .sie-testimonials_0-text {
-    font-size: clamp(12px, 1.5vw, 16px) !important;
-    text-align: center !important;
-  }
-  .d .sie-testimonials_view-1_1-text,
-  .d .sie-testimonials_view-1-1_1-text,
-  .d .sie-testimonials_view-1-2_1-text {
-    font-size: clamp(17px, 2vw, 24px) !important;
-    line-height: 1.7 !important;
-  }
-  .d .sie-testimonials_view-1_0-text,
-  .d .sie-testimonials_view-1-1_0-text,
-  .d .sie-testimonials_view-1-2_0-text {
-    font-size: clamp(15px, 1.8vw, 20px) !important;
-  }
-
-  /* ===== LOGOS strip — mobile e tablet ===== */
-  @media (max-width: 767px) {
-    .logos-roll {
-      padding: 32px 0 !important;
-      overflow: hidden !important;
-      background: #31302b !important;
-    }
-    .logos-roll__inner {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 0 !important;
-      width: 100% !important;
-    }
-    .logos-roll__marquee {
-      display: none !important;
-    }
-    .logos-roll__mobile {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 20px !important;
-      width: 100% !important;
-      padding: 0 20px !important;
-      box-sizing: border-box !important;
-    }
-    /* Badges circulares lado a lado */
-    .logos-roll__mobile-badges {
-      display: flex !important;
-      flex-direction: row !important;
-      justify-content: center !important;
-      align-items: center !important;
-      gap: 16px !important;
-    }
-    .logos-roll__mobile-badges img {
-      width: 42% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.92 !important;
-      display: block !important;
-    }
-    /* Wedding Industry Awards — portrait, centralizado */
-    .logos-roll__mobile-finalist {
-      display: flex !important;
-      justify-content: center !important;
-    }
-    .logos-roll__mobile-finalist img {
-      width: 52% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.92 !important;
-      display: block !important;
-    }
-    /* Strips wide — full width */
-    .logos-roll__mobile-strip {
-      display: flex !important;
-      justify-content: center !important;
-    }
-    .logos-roll__mobile-strip img {
-      width: 100% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.92 !important;
-      display: block !important;
-    }
-  }
-
-  /* Showit mobile class override */
-  .m .logos-roll__marquee {
-    display: none !important;
-  }
-  .m .logos-roll__mobile {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 24px !important;
-    width: 100% !important;
-    padding: 0 24px !important;
-    box-sizing: border-box !important;
-  }
-  .m .logos-roll__mobile-badges {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 16px !important;
-  }
-  .m .logos-roll__mobile-badges img {
-    width: 42% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    opacity: 0.92 !important;
-    display: block !important;
-  }
-  .m .logos-roll__mobile-finalist {
-    display: flex !important;
-    justify-content: center !important;
-  }
-  .m .logos-roll__mobile-finalist img {
-    width: 52% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    opacity: 0.92 !important;
-    display: block !important;
-  }
-  .m .logos-roll__mobile-strip {
-    display: flex !important;
-    justify-content: center !important;
-  }
-  .m .logos-roll__mobile-strip img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    opacity: 0.92 !important;
-    display: block !important;
-  }
-
-  /* Tablet: imagem cabe na viewport */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .logos-roll {
-      padding: 44px 0 !important;
-      overflow: hidden !important;
-    }
-    .logos-roll__marquee {
-      justify-content: center !important;
-      overflow: hidden !important;
-      width: 100% !important;
-    }
-    .logos-roll__strip {
-      transform: none !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.88 !important;
-      display: block !important;
-      margin: 0 auto !important;
-    }
-  }
-}
 </style>
-  <script>
-    /* ── BLOCK ALL ZOOM ─────────────────────────────────────────── */
-    (function() {
-      /* 1. Pinch zoom — touchmove with 2+ fingers */
-      document.addEventListener('touchmove', function(e) {
-        if (e.touches.length > 1) { e.preventDefault(); }
-      }, { passive: false });
-
-      /* 2. Gesture events (Safari) */
-      document.addEventListener('gesturestart', function(e) { e.preventDefault(); }, { passive: false });
-      document.addEventListener('gesturechange', function(e) { e.preventDefault(); }, { passive: false });
-      document.addEventListener('gestureend', function(e) { e.preventDefault(); }, { passive: false });
-
-      /* 3. Double-tap zoom */
-      var lastTap = 0;
-      document.addEventListener('touchend', function(e) {
-        var now = Date.now();
-        if (now - lastTap < 300) { e.preventDefault(); }
-        lastTap = now;
-      }, { passive: false });
-
-      /* 4. Keyboard zoom (Ctrl/Cmd + +/-/scroll) */
-      document.addEventListener('keydown', function(e) {
-        if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-          e.preventDefault();
-        }
-      });
-      document.addEventListener('wheel', function(e) {
-        if (e.ctrlKey) { e.preventDefault(); }
-      }, { passive: false });
-    })();
-  </script>
-  <script>
-    /* ── Logo: scroll suave para o topo ao clicar ── */
-    document.addEventListener('DOMContentLoaded', function() {
-      var logo = document.querySelector('.sie-header_8');
-      if (logo) {
-        logo.style.cursor = 'pointer';
-        logo.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-    });
-  </script>
 </head>
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Paragraph mobile: Showit usa classe .m no <html>, não media query
-     Esta regra garante 16px independentemente da viewport */
-  .m .st-m-paragraph,
-  .m .st-m-paragraph span {
-    font-size: 16px !important;
-    line-height: 1.65 !important;
-  }
-
-  /*
-   * ADAPTAÇÃO MOBILE/TABLET — desktop NUNCA alterado
-   * Todos os seletores usam @media max-width ou prefixo .m (Showit mobile class)
-   * Desktop: classe .d do Showit — não é afectado por nenhuma regra abaixo
-   */
-
-  /* ── MOBILE (<768px): paragraph 13px → 16px para legibilidade ── */
-  @media (max-width: 767px) {
-    .m .st-m-paragraph,
-    .m .st-m-paragraph span {
-      font-size: 16px !important;
-      line-height: 1.65 !important;
-    }
-
-    /* VIEW GALLERY → : nome do casal → 22px mobile */
-    .m .sie-manual-posts_1-text,
-    .m .sie-manual-posts_4-text,
-    .m .sie-manual-posts_6-text {
-      font-size: 22px !important;
-    }
-  }
-
-  /* ── TABLET (768px–1024px): valores intermédios ── */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    /* Heading: 42px desktop → 36px tablet */
-    .st-d-heading { font-size: 36px !important; line-height: 1.15 !important; }
-
-    /* Title: 43px desktop → 40px tablet */
-    .st-d-title { font-size: 40px !important; }
-
-    /* Paragraph: 15px desktop → 15px tablet (manter) */
-    .st-d-paragraph { font-size: 15px !important; line-height: 1.6 !important; }
-
-    /* Setas testimonials no tablet */
-    .sie-testimonials_2,
-    .sie-testimonials_3 { width: 44px !important; height: 44px !important; }
-  }
-</style>
     <body>
       
       
-    <nav id="navbar-custom">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a href="#hero" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#manual-posts" class="nav-link">Galleries</a>
-        </div>
-        <a href="#hero" class="nav-logo">
-          <img src="https://images-pw.pixieset.com/profile/783083/4660b3aebb60a41abcadc0f362c6ffb9e622b004abae483035fe06cab98d1cb3.png" alt="Jacque Prates" style="height:74px;width:auto;display:block;" />
-        </a>
-        <div class="nav-right">
-          <a href="#wedding" class="nav-link">Wedding</a>
-          <a href="#freebie" class="nav-link">Investment</a>
-        </div>
-      </div>
-    </nav>
       <div id="si-sp" class="sp">
   <!-- <div id="hamburger-menu" data-bid="hamburger-menu" class="sb sib-hamburger-menu sb-lm sb-ld"> -->
   <div class="ss-s ss-bg">
@@ -2188,14 +1394,14 @@ img {
   <!-- <a href="#wedding" target="_self" class="sie-header_3 se" data-sid="header_3">
   <nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">portfolio</nav>
   </a> -->
-  <a href="#manual-posts" target="_self" class="sie-header_3 se" data-sid="header_3">
-  <nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">galleries</nav>
+  <a href="#wedding" target="_self" class="sie-header_3 se" data-sid="header_3">
+  <nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">wedding</nav>
   </a>
   <!-- <a href="services.html" target="_self" class="sie-header_4 se" data-sid="header_4">
   <nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">services</nav>
   </a> -->
-  <a href="#wedding" target="_self" class="sie-header_4 se" data-sid="header_4">
-  <nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">wedding</nav>
+  <a href="#manual-posts" target="_self" class="sie-header_4 se" data-sid="header_4">
+  <nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">galleries</nav>
   </a>
   <!-- <a href="blog.html" target="_self" class="sie-header_5 se" data-sid="header_5">
   <nav class="se-t sie-header_5-text st-m-subheading st-d-subheading">blog</nav>
@@ -2240,31 +1446,26 @@ img {
   
   </div>
   <div data-sid="hero_2" class="sie-hero_2 se se-pc">
-    <a href="journey.html" target="_blank" class="elegant-cta-link">
-      <button type="button" aria-label="Let's do it?" class="se-button st-primary elegant-cta-btn" style="padding-top:0.75em !important;padding-bottom:0.75em !important;">
-        <span class="st-m-primary st-d-primary" style="display:block;text-align:center;">Let's do it?</span>
+    <a href="journey.html" style="text-decoration:none;display:inline-block;width:50%;">
+      <button type="button" aria-label="Let's do it?" class="se-button st-primary elegant-cta-btn" style="width:100%;">
+        <span class="st-m-primary st-d-primary">Let's do it?</span>
       </button>
     </a>
   </div>
   <style>
-    .elegant-cta-link {
-      text-decoration: none;
-      display: inline-block;
-      width: 50%;
-    }
     .elegant-cta-btn {
-      background: #c6a07c !important;
-      color: #ffffff;
-      border: none;
-      border-radius: 8px;
-      padding: 1.1em 2em !important;
-      font-size: 22px;
-      font-weight: 700;
-      font-family: "Segoe UI", Arial, sans-serif;
-      cursor: pointer;
-      display: inline-block;
-      width: 100%;
-      text-align: center;
+       background: #c6a07c !important;
+    
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
     }
     .elegant-cta-btn:hover, .elegant-cta-btn:focus {
       background-color: #D6B39F;
@@ -2272,32 +1473,6 @@ img {
       box-shadow: 0 6px 24px 0 rgba(214,179,159,0.28), 0 2px 8px 0 rgba(47,44,38,0.12);
       transform: translateY(-2px) scale(1.03);
       border-radius: 8px;
-    }
-    @media (max-width: 767px) {
-      /* Botão Let's do it? — tamanho compacto, alinhado à esquerda */
-      .elegant-cta-link {
-        display: inline-block;
-        width: auto;
-      }
-      .elegant-cta-btn {
-        width: auto !important;
-        min-width: 0 !important;
-        padding: 6px 18px !important;
-        font-size: 13px !important;
-        white-space: nowrap;
-        line-height: 1.4 !important;
-      }
-      /* Logo — centralizado no mobile */
-      .sie-header_8 {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        text-align: center !important;
-      }
-      /* Previne scroll horizontal */
-      body, #si-sp {
-        overflow-x: hidden !important;
-        max-width: 100vw !important;
-      }
     }
   </style>
   </div>
@@ -2354,53 +1529,12 @@ img {
   </div>
   </section>
 
-  <style>
-    @media (max-width: 767px) {
-      .journey-testimonial {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-top: 58px !important;
-      }
-      .journey-testimonial__inner {
-        flex-direction: column !important;
-        gap: 16px !important;
-        align-items: flex-start !important;
-        padding: 0 18px !important;
-      }
-      .journey-testimonial__media {
-        width: 100% !important;
-        order: 1 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      .journey-testimonial__image {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        display: block !important;
-      }
-      .journey-testimonial__quote {
-        padding-top: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin: 16px 0 0 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        order: 2 !important;
-        text-align: left !important;
-      }
-      .journey-testimonial__quote p {
-        text-align: left !important;
-        margin-left: 0 !important;
-      }
-    }
-  </style>
   <section id="about" class="journey-testimonial" aria-labelledby="journey-testimonial-author">
-  <div class="journey-testimonial__inner">
-    <div class="journey-testimonial__media">
-      <img class="journey-testimonial__image" src="https://i.postimg.cc/V5P1f0DJ/Whats-App-Image-2026-02-06-at-17-55-03.jpg" alt="Jacque portrait in the About Me section" style="width:500px;max-width:100%;height:auto;display:block;"/>
+  <div class="journey-testimonial__inner" style="display:flex;align-items:flex-start;gap:84px;">
+    <div class="journey-testimonial__media" style="margin:0;padding:0;align-self:flex-start;">
+      <img class="journey-testimonial__image" src="images/image.png" alt="Jacque portrait in the About Me section" style="width:500px;max-width:100%;height:auto;display:block;"/>
     </div>
-    <div class="journey-testimonial__quote">
+    <div class="journey-testimonial__quote" style="margin:0; padding-top: 50px; align-self:flex-start;">
       <p class="journey-editorial__breath"> Hi! am Jacque</p>
       <br>
       <p class="journey-testimonial__text" style="margin:0;">I’m Jacque – documentary wedding<br>photographer, professional<br>vibe-reader, and unapologetic romantic.<br>I believe that after the wedding, what actually matters isn’t the<br>chair covers or the timeline running perfectly.<br>It’s the feeling.<br>The way you looked at each other.<br>The way your mum cried.<br>The way your friends reacted during the speeches.<br>My job isn’t to stage your love story.<br>It’s to document it as it really happens – and make sure you<br>never forget how it felt to be that in love.</p>
@@ -2438,80 +1572,21 @@ img {
       color: #fff;
     }
     .journey-testimonial-2__cta-link .se-button {
-      background: rgba(198,99,57,1) !important;
+      background: #c66339 !important;
       color: #fff !important;
       border: none;
-      font-weight: 500;
-      border-radius: 0px;
-      padding: 13px 14px;
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 22px;
+      padding: 1em 2.7em;
+      font-size: 1.22em;
+      letter-spacing: 0.03em;
       box-shadow: none;
-      transition: background-color 0.5s, color 0.5s;
+      text-transform: none;
+      transition: background 0.2s, color 0.2s;
     }
     .journey-testimonial-2__cta-link .se-button:hover {
-      background: #f6f3ee !important;
-      color: #2f2c26 !important;
-    }
-    .journey-testimonial-2__cta-link .se-button:hover span {
-      color: #2f2c26 !important;
-    }
-    @media (max-width: 767px) {
-      #wedding.journey-testimonial-2 {
-        padding: 0 !important;
-      }
-      .journey-testimonial-2__inner {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 0 !important;
-        margin-top: 0 !important;
-        gap: 0 !important;
-        overflow: hidden !important;
-      }
-      #wedding .journey-testimonial-2__media,
-      #wedding figure.journey-testimonial-2__media {
-        order: 1 !important;
-        width: calc(100vw - 36px) !important;
-        max-width: calc(100vw - 36px) !important;
-        height: calc((100vw - 36px) * 0.67) !important;
-        margin: 20px 18px 0 18px !important;
-        padding: 0 !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
-      }
-      #wedding figure.journey-testimonial-2__media img.journey-testimonial-2__image,
-      #wedding .journey-testimonial-2__image {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        min-height: 0 !important;
-        display: block !important;
-        object-fit: cover !important;
-        aspect-ratio: unset !important;
-        border-radius: 0 !important;
-        transform: none !important;
-      }
-      .journey-testimonial-2__quote {
-        order: 2 !important;
-        padding: 24px 18px 32px !important;
-        margin: 0 !important;
-        position: relative !important;
-        z-index: 1 !important;
-        text-align: left !important;
-      }
-      .journey-testimonial-2__cta-wrap {
-        margin-top: 16px !important;
-      }
-      .journey-testimonial-2__cta-link .se-button {
-        padding: 0.6em 1.6em !important;
-        font-size: 0.95em !important;
-        border-radius: 6px !important;
-      }
-      .btn-square {
-        padding: 0.6em 1.6em !important;
-      }
+      background: #a94e23 !important;
+      color: #fff !important;
     }
   </style>
 
@@ -2542,8 +1617,8 @@ img {
      also make it more visible by adding a border . ≈ -->
       <!--make the text visible-->
 
-  <a href="journey.html" target="_blank" class="journey-testimonial-2__cta-link">  
-    <button type="button" aria-label="Journey" class="se-button st-primary"><span class="st-m-primary st-d-primary">The Journey</span></button></a></div><div data-sid="freebie_2" class="sie-freebie_2 se">
+  <a href="journey.html" target="_self" class="journey-testimonial-2__cta-link">  
+    <button type="button" aria-label="Journey" class="se-button st-primary btn-square"><span class="st-m-primary st-d-primary">The Journey</span></button></div><div data-sid="freebie_2" class="sie-freebie_2 se">
     <style>
       .btn-square {
         padding: 1.1em 1.1em !important;
@@ -2555,9 +1630,10 @@ img {
   </div>
 
   </div>
-  <figure class="journey-testimonial-2__media" style="margin: -20px 0 0 0;width:80%;height:auto;overflow:visible;padding-top:24px;">
-  <img class="journey-testimonial-2__image" src="https://i.postimg.cc/JntMmfJq/sdfgh.jpg" alt="Herni and Graham in traditional wedding attire" style="width:100%;height:auto;max-width:none;max-height:none;display:block;"/>
-  </figure>  </div>
+  <figure class="journey-testimonial-2__media" style="margin: -20px 0 0 0;width:80% !important;height:auto !important;overflow:visible !important;padding-top:24px !important;">
+  <img class="journey-testimonial-2__image" src="https://i.postimg.cc/JntMmfJq/sdfgh.jpg" alt="Herni and Graham in traditional wedding attire" style="width:100% !important;height:auto !important;max-width:none !important;max-height:none !important;display:block !important;"/>
+  </figure>
+  </div>
   </section>
   <section class="journey-video" aria-labelledby="journey-video-title">
   <div class="journey-video__inner">
@@ -2587,7 +1663,7 @@ img {
   <div class="stats-cards__inner">
   <article class="stats-cards__card">
   <div class="stats-cards__icon" aria-hidden="true">
-  <svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="28"></circle><path d="M48 20v28l16 11"></path><path d="M20 48h-8M84 48h-8M48 12v-8"></path></svg>
+  <svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="25"></circle><path d="M48 24v24l14 10"></path><path d="M23 48h-8M81 48h-8M48 15v-8"></path></svg>
   </div>
   <div class="stats-cards__content">
   <p class="stats-cards__value" data-counter data-target="3">0</p>
@@ -2596,7 +1672,7 @@ img {
   </article>
   <article class="stats-cards__card">
   <div class="stats-cards__icon" aria-hidden="true">
-  <svg viewBox="0 0 96 96"><rect x="18" y="24" width="60" height="44" rx="8"></rect><circle cx="48" cy="46" r="11"></circle><path d="M60 30l9-7M28 30l-7-6M20 60l11-11 8 8 10-10 13 13"></path></svg>
+  <svg viewBox="0 0 96 96"><rect x="16" y="22" width="64" height="48" rx="10"></rect><circle cx="48" cy="46" r="12"></circle><path d="M62 28l10-8M26 28l-7-6M19 62l12-12 9 8 10-10 14 14"></path></svg>
   </div>
   <div class="stats-cards__content">
   <p class="stats-cards__value" data-counter data-target="322" data-suffix="k">0k</p>
@@ -2605,7 +1681,7 @@ img {
   </article>
   <article class="stats-cards__card">
   <div class="stats-cards__icon" aria-hidden="true">
-  <svg viewBox="0 0 96 96"><path d="M48 74 C36 62 16 50 16 34 C16 24 24 16 34 16 C40 16 45 19 48 24 C51 19 56 16 62 16 C72 16 80 24 80 34 C80 50 60 62 48 74 Z"></path></svg>
+  <svg viewBox="0 0 96 96"><path d="M30 25c0 8 7 14 18 24 11-10 18-16 18-24 0-7-5-13-12-13-5 0-8 2-11 6-3-4-6-6-11-6-7 0-12 6-12 13z"></path><circle cx="69" cy="29" r="8"></circle><path d="M65 29h8"></path></svg>
   </div>
   <div class="stats-cards__content">
   <p class="stats-cards__value" data-counter data-target="389">0</p>
@@ -2641,16 +1717,16 @@ img {
 
   </section>
 
-<section id="contact-form" class="contact-form-section" style="display:none; background: url('images/Martha&Matt-948.jpg') center top/cover no-repeat; position:relative; z-index:10;">
-  <div style="max-width:740px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:80px 24px 80px;box-sizing:border-box;">
-    <h2 style="font-family:'Instrument Serif',serif;font-size:3rem;font-weight:400;font-style:italic;color:#1a1a1a;margin:0 0 48px 0;padding:0;text-align:center;width:100%;display:block;line-height:1.2;">
-      Let's do this?
+<section id="contact-form" class="contact-form-section" style="background:#f6f3ee; padding:70px 0; display:none; background: url('images/Martha&Matt-948.jpg') center top/cover no-repeat; position:relative; min-height:100vh; height:100vh;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+    <h2 class="se-t sie-freebie_3-text st-m-heading st-d-heading se-rc" style="font-size:3rem;font-weight:700;margin-bottom:2rem;text-align:center;width:100%;"> 
+      <i>Let's do this?</i><br>
     </h2>
-    <iframe height="926" style="width:100%; max-width:740px; border:0; display:block; margin:0 auto;" id="sn-form-dlg0g"
-      src="https://app.studioninja.co/contactform/parser/0a800fc9-9c28-1786-819c-38b196c221ca/0a800fc9-9c28-1786-819c-38b196d821cc"
+    <iframe height="306" style="min-width:80%; max-width: 600px; border: 0; margin-top: 8.2rem;" id="sn-form-y4qh8"
+      src="https://app.studioninja.co/contactform/parser/0a800fc9-9c28-1786-819c-38b196c221ca/0a800fc9-9c28-1786-819c-38b3cfeb224e"
       allowfullscreen>
     </iframe>
-    <script type="text/javascript" data-iframe-id="sn-form-dlg0g"
+    <script type="text/javascript" data-iframe-id="sn-form-y4qh8"
       src="https://app.studioninja.co/client-assets/form-render/assets/scripts/iframeResizer.js"></script>
   </div>
 </section>
@@ -2665,8 +1741,8 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f6f3ee;
-    height: auto;
-    min-height: unset;
+    min-height: 100vh;
+    height: 100vh;
   }
   #contact-form.contact-form-section::before {
     content: '';
@@ -2694,32 +1770,6 @@ img {
   <div class="logos-roll__inner">
   <div class="logos-roll__marquee">
   <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
-  </div>
-  <div class="logos-roll__mobile" style="flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 !important;box-sizing:border-box !important;">
-
-    <!-- Linha 1: Badges circulares lado a lado -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:16px !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/N0ymFcWZ/logo-strip-1-600x500.png" alt="Best of Bridebook Award 2026" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/7LC0hkpd/logo-strip-2-600x500.png" alt="Gold Award 2024" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 2: Wedding Industry Awards portrait, menor e centralizado -->
-    <div style="display:flex !important;justify-content:center !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/cJKwCSVp/logo-strip-3-1080x1920.png" alt="Wedding Industry Awards Regional Finalist 2026" style="width:28% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 3: Bride Association + This is Reportage + Inspiration — 3 colunas iguais -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:8px !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/R03KhBjY/logo-strip-4-600x500.png" alt="Bride Association" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/GpBGtCWw/logo-strip-5-600x500.png" alt="This is Reportage" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/43rth0g8/logo-strip-6-600x500.png" alt="Inspiration Photographers" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 4: To Have & To Hold — proporcional às outras linhas -->
-    <div style="display:flex !important;justify-content:center !important;width:100% !important;padding:0 20px !important;box-sizing:border-box !important;">
-      <img src="https://i.postimg.cc/s2tSZLrH/logo-strip-7-800x300.png" alt="To Have and To Hold Wedding Magazine" style="width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
   </div>
   </div>
   </section>
@@ -2759,19 +1809,17 @@ img {
     }
 
     (function setupJourneyVideo() {
-      const embedHosts = document.querySelectorAll("[data-youtube-embed]");
+      const embedHost = document.querySelector("[data-youtube-embed]");
       const parallaxFrame = document.querySelector("[data-parallax-frame]");
 
-      if (embedHosts.length > 0) {
+      if (embedHost) {
         const embedUrl = getYouTubeEmbedUrl(youtubeUrl);
 
-        embedHosts.forEach(function(embedHost) {
-          if (embedUrl) {
-            embedHost.innerHTML = '<iframe src="' + embedUrl + '" title="Wedding film" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-          } else {
-            embedHost.innerHTML = '<div class="journey-video__fallback">Paste a valid YouTube URL in the script to load the film</div>';
-          }
-        });
+        if (embedUrl) {
+          embedHost.innerHTML = '<iframe src="' + embedUrl + '" title="Wedding film" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        } else {
+          embedHost.innerHTML = '<div class="journey-video__fallback">Paste a valid YouTube URL in the script to load the film</div>';
+        }
       }
 
       if (!parallaxFrame || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -2801,142 +1849,61 @@ img {
     })();
   </script>
 
-  <style>
-    /* ── Testimonials: smooth crossfade transition ── */
-    #testimonials {
-      position: relative;
-    }
-    .sib-testimonials {
-      position: relative !important;
-    }
-    #testimonials .ss.sis-testimonials_view-1,
-    #testimonials .ss.sis-testimonials_view-1-1,
-    #testimonials .ss.sis-testimonials_view-1-2 {
-      position: absolute !important;
-      top: 0; left: 0; width: 100%;
-      height: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.65s ease, visibility 0.65s ease;
-      pointer-events: none;
-    }
-    #testimonials .ss.sactive {
-      opacity: 1 !important;
-      visibility: visible !important;
-      pointer-events: auto !important;
-    }
-    /* Arrow buttons: smooth hover + click feedback */
-    .sie-testimonials_2,
-    .sie-testimonials_3 {
-      transition: transform 0.2s ease, opacity 0.2s ease !important;
-    }
-    .sie-testimonials_2:hover,
-    .sie-testimonials_3:hover {
-      transform: scale(1.18) !important;
-      opacity: 0.85 !important;
-    }
-    .sie-testimonials_2:active,
-    .sie-testimonials_3:active {
-      transform: scale(0.92) !important;
-      opacity: 0.6 !important;
-    }
-
-  </style>
-
   <script>
     (function setupTestimonialsFallback() {
       var root = document.getElementById("testimonials");
-      if (!root) return;
+      if (!root) {
+        return;
+      }
 
       var viewIds = ["testimonials_view-1", "testimonials_view-1-1", "testimonials_view-1-2"];
-      var views = viewIds.map(function(id) { return document.getElementById(id); }).filter(Boolean);
-      if (views.length < 2) return;
+      var views = viewIds
+        .map(function (id) {
+          return document.getElementById(id);
+        })
+        .filter(Boolean);
+
+      if (views.length < 2) {
+        return;
+      }
 
       var index = 0;
-      var autoTimer = null;
-      var AUTO_DELAY = 5000;
-      var transitioning = false;
+      for (var i = 0; i < views.length; i += 1) {
+        if (views[i].classList.contains("sactive")) {
+          index = i;
+          break;
+        }
+      }
 
-      /* Set initial state — all hidden, position absolute */
-      views.forEach(function(view, i) {
-        view.style.display = "block";
-        view.classList.remove("sactive");
-        view.style.opacity = "0";
-        view.style.pointerEvents = "none";
-      });
-
-      function showView(nextIndex, direction) {
-        if (transitioning) return;
-        transitioning = true;
-
-        var current = views[index];
-        var next = views[nextIndex];
-        index = nextIndex;
-
-        /* Fade out current */
-        current.style.transition = "opacity 0.65s ease";
-        current.style.opacity = "0";
-        current.style.pointerEvents = "none";
-        current.classList.remove("sactive");
-
-        /* Fade in next */
-        next.style.transition = "opacity 0.65s ease";
-        next.style.opacity = "0";
-        next.classList.add("sactive");
-        next.style.pointerEvents = "auto";
-
-        /* Small delay so browser registers the opacity:0 before transitioning */
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            next.style.opacity = "1";
-          });
+      function showView(nextIndex) {
+        index = (nextIndex + views.length) % views.length;
+        views.forEach(function (view, viewIndex) {
+          var isActive = viewIndex === index;
+          view.classList.toggle("sactive", isActive);
+          view.style.display = isActive ? "block" : "none";
         });
-
-        setTimeout(function() {
-          transitioning = false;
-        }, 700);
       }
 
-      function goTo(nextIndex, resetTimer) {
-        nextIndex = (nextIndex + views.length) % views.length;
-        if (nextIndex === index) return;
-        showView(nextIndex);
-        if (resetTimer) startAuto();
+      function onClick(step) {
+        return function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          showView(index + step);
+        };
       }
 
-      function startAuto() {
-        clearInterval(autoTimer);
-        autoTimer = setInterval(function() {
-          goTo(index + 1, false);
-        }, AUTO_DELAY);
-      }
-
-      /* Arrow buttons */
       var prevBtn = root.querySelector('[data-sid="testimonials_2"]');
       var nextBtn = root.querySelector('[data-sid="testimonials_3"]');
 
       if (prevBtn) {
-        prevBtn.addEventListener("click", function(e) {
-          e.preventDefault(); e.stopPropagation();
-          goTo(index - 1, true);
-        });
+        prevBtn.addEventListener("click", onClick(-1));
       }
+
       if (nextBtn) {
-        nextBtn.addEventListener("click", function(e) {
-          e.preventDefault(); e.stopPropagation();
-          goTo(index + 1, true);
-        });
+        nextBtn.addEventListener("click", onClick(1));
       }
 
-      /* Pause on hover */
-      root.addEventListener("mouseenter", function() { clearInterval(autoTimer); });
-      root.addEventListener("mouseleave", function() { startAuto(); });
-
-      /* Init */
-      views[0].style.opacity = "1";
-      views[0].classList.add("sactive");
-      views[0].style.pointerEvents = "auto";
-      startAuto();
+      showView(index);
     })();
   </script>
 
