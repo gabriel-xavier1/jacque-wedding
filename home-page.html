@@ -2225,6 +2225,31 @@ img {
   </div>
   </div>
 
+  <!-- Hamburguer mobile customizado -->
+  <button id="custom-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Menu mobile overlay -->
+  <div id="mobile-nav">
+    <button id="mobile-nav-close" aria-label="Fechar">✕</button>
+    <a href="#hero" onclick="document.getElementById('mobile-nav').classList.remove('open')">Home</a>
+    <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('open')">About</a>
+    <a href="#manual-posts" onclick="document.getElementById('mobile-nav').classList.remove('open')">Galleries</a>
+    <a href="#wedding" onclick="document.getElementById('mobile-nav').classList.remove('open')">Wedding</a>
+    <a href="#freebie" onclick="document.getElementById('mobile-nav').classList.remove('open')">Investment</a>
+  </div>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('custom-hamburger');
+      var nav = document.getElementById('mobile-nav');
+      var close = document.getElementById('mobile-nav-close');
+      if (btn) btn.addEventListener('click', function() { nav.classList.add('open'); });
+      if (close) close.addEventListener('click', function() { nav.classList.remove('open'); });
+    })();
+  </script>
+
   <!--make this menu always on the top while scrolling
   but  the background  has to turn to  black after scrolling otherwise it should be transparent-->
 
@@ -2239,6 +2264,87 @@ img {
 
     #header.scrolled {
       background-color: black;
+    }
+
+    /* Esconde links de nav no mobile — hamburguer já existe no Showit */
+    @media (max-width: 767px) {
+      .sie-header_1, .sie-header_2, .sie-header_3,
+      .sie-header_4, .sie-header_5, .sie-header_6 {
+        display: none !important;
+      }
+      /* Mostra hamburguer customizado */
+      #custom-hamburger {
+        display: flex !important;
+      }
+    }
+    .m .sie-header_1, .m .sie-header_2, .m .sie-header_3,
+    .m .sie-header_4, .m .sie-header_5, .m .sie-header_6 {
+      display: none !important;
+    }
+    .m #custom-hamburger {
+      display: flex !important;
+    }
+
+    /* Hamburguer */
+    #custom-hamburger {
+      display: none;
+      position: fixed;
+      top: 14px;
+      right: 16px;
+      z-index: 9999;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: transparent;
+      border: none;
+    }
+    #custom-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    #custom-hamburger.scrolled span {
+      background: #fff;
+    }
+
+    /* Menu mobile overlay */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26,22,18,0.97);
+      z-index: 9998;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    #mobile-nav.open {
+      display: flex;
+    }
+    #mobile-nav a {
+      color: #fff;
+      font-family: 'Instrument Sans', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    #mobile-nav-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
     }
   </style>
 
@@ -2709,12 +2815,12 @@ img {
 
   </section>
 
-<section id="contact-form" class="contact-form-section" style="display:none; background: url('images/Martha&Matt-948.jpg') center center/cover no-repeat; position:relative; z-index:10;">
+<section id="contact-form" class="contact-form-section" style="display:none; background: url('images/Martha&Matt-948.jpg') bottom center/cover no-repeat; position:relative; z-index:10;">
   <div style="max-width:520px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:80px 24px 80px;box-sizing:border-box;">
     <h2 style="font-family:'Instrument Serif',serif;font-size:3rem;font-weight:400;font-style:italic;color:#1a1a1a;margin:0 0 48px 0;padding:0;text-align:center;width:100%;display:block;line-height:1.2;">
       Let's do this?
     </h2>
-    <iframe height="926" style="width:100%; max-width:520px; border:0; display:block; margin:0 auto;" id="sn-form-dlg0g"
+    <iframe height="900" style="width:100%;max-width:340px;border:0;display:block;margin:0 auto;" id="sn-form-dlg0g"
       src="https://app.studioninja.co/contactform/parser/0a800fc9-9c28-1786-819c-38b196c221ca/0a800fc9-9c28-1786-819c-38b196d821cc"
       allowfullscreen>
     </iframe>
@@ -2729,12 +2835,13 @@ img {
   }
   #contact-form.contact-form-section {
     position: relative;
-    background-position: center top;
+    background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f6f3ee;
     height: auto;
     min-height: unset;
+    width: 100%;
   }
   #contact-form.contact-form-section::before {
     content: '';
@@ -3125,6 +3232,129 @@ img {
       setTimeout(applyCenter, 1200);
     })();
   </script>
+
+  <!-- Hamburguer mobile — fora do Showit container -->
+  <style>
+    #mob-hamburger {
+      display: none;
+      position: fixed;
+      top: 14px;
+      right: 16px;
+      z-index: 99999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 12px 14px;
+      background: #2d2a24;
+      border: none;
+      border-radius: 4px;
+    }
+    #mob-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 1px;
+    }
+    #mob-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(20,17,14,0.99);
+      z-index: 999999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      opacity: 0;
+      transform: translateY(-12px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    #mob-nav.open {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #mob-nav a {
+      color: #fff;
+      font-family: 'Instrument Serif', serif;
+      font-size: 38px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s;
+    }
+    #mob-nav.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #mob-nav.open a:nth-child(2) { transition-delay: 0.05s; }
+    #mob-nav.open a:nth-child(3) { transition-delay: 0.10s; }
+    #mob-nav.open a:nth-child(4) { transition-delay: 0.15s; }
+    #mob-nav.open a:nth-child(5) { transition-delay: 0.20s; }
+    #mob-nav.open a:nth-child(6) { transition-delay: 0.25s; }
+    #mob-nav a:hover { color: #c6a07c; }
+    #mob-nav-x {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      color: #d1583b;
+      font-size: 32px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 8px;
+      transition: color 0.2s;
+    }
+    #mob-nav-x:hover { color: #fff; }
+    @media (max-width: 767px) {
+      #mob-hamburger { display: flex !important; }
+    }
+    .m #mob-hamburger { display: flex !important; }
+  </style>
+
+  <button id="mob-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div id="mob-nav">
+    <button id="mob-nav-x" aria-label="Fechar">✕</button>
+    <a href="#hero"         onclick="document.getElementById('mob-nav').classList.remove('open')">Home</a>
+    <a href="#about"        onclick="document.getElementById('mob-nav').classList.remove('open')">About</a>
+    <a href="#wedding"      onclick="document.getElementById('mob-nav').classList.remove('open')">Wedding</a>
+    <a href="#manual-posts" onclick="document.getElementById('mob-nav').classList.remove('open')">Galleries</a>
+    <a href="#freebie"      onclick="document.getElementById('mob-nav').classList.remove('open')">Investment</a>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('mob-hamburger');
+      var nav = document.getElementById('mob-nav');
+      var x   = document.getElementById('mob-nav-x');
+      if(btn) btn.addEventListener('click', function(){
+        nav.style.display = 'flex';
+        requestAnimationFrame(function(){
+          requestAnimationFrame(function(){
+            nav.classList.add('open');
+          });
+        });
+        btn.style.display = 'none';
+      });
+      if(x) x.addEventListener('click', function(){
+        nav.classList.remove('open');
+        setTimeout(function(){ nav.style.display = 'none'; }, 350);
+        btn.style.display = 'flex';
+      });
+    })();
+  </script>
+
     </body>
 
   </html>
