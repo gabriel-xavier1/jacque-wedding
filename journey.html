@@ -118,7 +118,10 @@
       #mob-nav.open a:nth-child(5) { transition-delay: 0.20s; }
       #mob-nav.open a:nth-child(6) { transition-delay: 0.25s; }
       #mob-nav a:hover { color: #c6a07c; }
-      #mob-nav a:focus, #mob-nav a:active { outline: none; color: #c6a07c; }
+      #mob-nav a:focus, #mob-nav a:active { outline: none; color: #c6a07c; -webkit-tap-highlight-color: transparent; }
+      #mob-nav-x:focus, #mob-nav-x:active,
+      #mob-hamburger:focus, #mob-hamburger:active { outline: none; -webkit-tap-highlight-color: transparent; box-shadow: none; }
+      * { -webkit-tap-highlight-color: transparent; }
       #mob-nav-x {
         position: absolute;
         top: 16px; right: 16px;
