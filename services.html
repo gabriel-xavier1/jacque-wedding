@@ -5751,6 +5751,8 @@
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
     }
     #mob-nav.open a { opacity: 1; transform: translateY(0); }
     #mob-nav.open a:nth-child(2) { transition-delay: 0.05s; }
@@ -5759,6 +5761,7 @@
     #mob-nav.open a:nth-child(5) { transition-delay: 0.20s; }
     #mob-nav.open a:nth-child(6) { transition-delay: 0.25s; }
     #mob-nav a:hover { color: #c6a07c; }
+    #mob-nav a:focus, #mob-nav a:active { outline: none; color: #c6a07c; }
     #mob-nav-x {
       position: absolute;
       top: 16px; right: 16px;
@@ -5777,27 +5780,44 @@
   </button>
   <div id="mob-nav">
     <button id="mob-nav-x" aria-label="Fechar">✕</button>
-    <a href="#hero"        onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Home</a>
-    <a href="#intro"       onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Moments</a>
-    <a href="#video-intro" onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">My Style</a>
-    <a href="#service-1"   onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Video</a>
-    <a href="#packages"    onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Pricing</a>
-    <a href="#faq"         onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">FAQ</a>
+    <a href="#hero"          onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Home</a>
+    <a href="#collage-intro" onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Moments</a>
+    <a href="#intro-custom"  onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">My Style</a>
+    <a href="#video-intro"   onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Video</a>
+    <a href="#service-1"     onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">Pricing</a>
+    <a href="#faq-custom"    onclick="document.getElementById('mob-nav').classList.remove('open');setTimeout(function(){document.getElementById('mob-nav').style.display='none';},350);">FAQ</a>
   </div>
   <script>
     (function(){
       var btn = document.getElementById('mob-hamburger');
       var nav = document.getElementById('mob-nav');
       var x   = document.getElementById('mob-nav-x');
+
+      function closeNav() {
+        nav.classList.remove('open');
+        setTimeout(function(){ nav.style.display = 'none'; }, 350);
+        btn.style.display = 'flex';
+      }
+
+      function scrollTo(id) {
+        var el = document.getElementById(id) || document.querySelector('[data-bid="' + id + '"]');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
       if(btn) btn.addEventListener('click', function(){
         nav.style.display = 'flex';
         requestAnimationFrame(function(){ requestAnimationFrame(function(){ nav.classList.add('open'); }); });
         btn.style.display = 'none';
       });
-      if(x) x.addEventListener('click', function(){
-        nav.classList.remove('open');
-        setTimeout(function(){ nav.style.display = 'none'; }, 350);
-        btn.style.display = 'flex';
+      if(x) x.addEventListener('click', closeNav);
+
+      nav.addEventListener('click', function(e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        e.preventDefault();
+        var id = a.getAttribute('href').replace('#', '');
+        closeNav();
+        setTimeout(function(){ scrollTo(id); }, 400);
       });
     })();
   </script>

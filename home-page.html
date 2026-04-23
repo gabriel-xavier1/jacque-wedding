@@ -3289,6 +3289,8 @@ img {
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
     }
     #mob-nav.open a {
       opacity: 1;
@@ -3300,6 +3302,7 @@ img {
     #mob-nav.open a:nth-child(5) { transition-delay: 0.20s; }
     #mob-nav.open a:nth-child(6) { transition-delay: 0.25s; }
     #mob-nav a:hover { color: #c6a07c; }
+    #mob-nav a:focus, #mob-nav a:active { outline: none; color: #c6a07c; }
     #mob-nav-x {
       position: absolute;
       top: 16px;
