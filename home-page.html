@@ -2131,6 +2131,22 @@ img {
     scroll-behavior: smooth;
   }
 
+  /* Remove tap highlight azul em todos os elementos clicáveis */
+  *, *:focus, *:active {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none;
+  }
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none;
+  }
+  a:focus, a:active,
+  button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
   /* Paragraph mobile: Showit usa classe .m no <html>, não media query
      Esta regra garante 16px independentemente da viewport */
   .m .st-m-paragraph,

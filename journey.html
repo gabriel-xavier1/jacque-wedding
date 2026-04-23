@@ -39,6 +39,11 @@
     <link rel="stylesheet" type="text/css" href="//lib.showit.co/engine/2.8.0/showit.css" />
 
     <style>
+      /* Remove tap highlight azul em todos os elementos clicáveis */
+      *, *:focus, *:active { -webkit-tap-highlight-color: transparent !important; outline: none; }
+      a, button, [role="button"] { -webkit-tap-highlight-color: transparent !important; outline: none; }
+      a:focus, a:active, button:focus, button:active { outline: none !important; box-shadow: none !important; -webkit-tap-highlight-color: transparent !important; }
+
       /* ===== MOBILE: Padronização de texto baseada na home-page.html ===== */
       @media (max-width: 767px) {
         .m .st-m-heading, .st-m-heading {
