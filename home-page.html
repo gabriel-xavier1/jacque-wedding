@@ -2408,15 +2408,6 @@ img {
   </div>
   </div>
 
-  <!-- Hero mobile overlay — centralizado, só aparece no mobile -->
-  <div class="hero-mobile-overlay">
-    <h1>For The Real</h1>
-    <h2>Journey</h2>
-    <a href="journey.html" target="_blank">
-      <button type="button">Let's do it?</button>
-    </a>
-  </div>
-
   <section class="journey-editorial" aria-labelledby="journey-editorial-title">
   <div class="journey-editorial__inner">
   <p class="journey-editorial__eyebrow">First Things First....</p>
@@ -3104,7 +3095,7 @@ img {
     (function centerHeroMobile() {
       if (window.innerWidth > 767) return;
       function applyCenter() {
-        var heroBlock = document.getElementById('hero');
+        var heroBlock = document.querySelector('[data-bid="hero"]');
         if (!heroBlock) return;
         // Já injetado?
         if (heroBlock.querySelector('.hero-mobile-overlay')) return;
