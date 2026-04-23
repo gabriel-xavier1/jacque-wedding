@@ -1214,6 +1214,10 @@
   @media (min-width: 768px) {
     .logos-roll__mobile {display:none !important;}
   }
+  @media (max-width: 767px) {
+    .logos-roll__mobile {display:flex !important;}
+  }
+  .m .logos-roll__mobile {display:flex !important;}
   .logos-roll__strip {display:block;
     height:auto;width:auto;max-width:none;
     opacity:0.88;transform:scale(0.67);
@@ -2691,7 +2695,7 @@ img {
   <div class="logos-roll__marquee">
   <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
   </div>
-  <div class="logos-roll__mobile" style="display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 !important;box-sizing:border-box !important;">
+  <div class="logos-roll__mobile" style="flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 !important;box-sizing:border-box !important;">
 
     <!-- Linha 1: Badges circulares lado a lado -->
     <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:16px !important;padding:0 20px !important;">
