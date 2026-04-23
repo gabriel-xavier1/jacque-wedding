@@ -1211,6 +1211,9 @@
   .logos-roll__inner {max-width:none;margin:0 auto;}
   .logos-roll__marquee {display:flex;align-items:center;justify-content:center;width:100%;}
   .logos-roll__mobile {display:none;}
+  @media (min-width: 768px) {
+    .logos-roll__mobile {display:none !important;}
+  }
   .logos-roll__strip {display:block;
     height:auto;width:auto;max-width:none;
     opacity:0.88;transform:scale(0.67);
@@ -2690,29 +2693,29 @@ img {
   <div class="logos-roll__marquee">
   <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
   </div>
-  <div class="logos-roll__mobile" style="display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 20px !important;box-sizing:border-box !important;">
+  <div class="logos-roll__mobile" style="display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 !important;box-sizing:border-box !important;">
 
     <!-- Linha 1: Badges circulares lado a lado -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:16px !important;">
+    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:16px !important;padding:0 20px !important;">
       <img src="images/NEW/logo-strip-1_600x500.png" alt="Best of Bridebook Award 2026" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
       <img src="images/NEW/logo-strip-2_600x500.png" alt="Gold Award 2024" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
     </div>
 
     <!-- Linha 2: Wedding Industry Awards portrait, menor e centralizado -->
-    <div style="display:flex !important;justify-content:center !important;">
+    <div style="display:flex !important;justify-content:center !important;padding:0 20px !important;">
       <img src="images/NEW/logo-strip-3_1080x1920.png" alt="Wedding Industry Awards Regional Finalist 2026" style="width:28% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
     </div>
 
     <!-- Linha 3: Bride Association + This is Reportage + Inspiration — 3 colunas iguais -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:8px !important;">
+    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:8px !important;padding:0 20px !important;">
       <img src="images/NEW/logo-strip-4_600x500.png" alt="Bride Association" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
       <img src="images/NEW/logo-strip-5_600x500.png" alt="This is Reportage" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
       <img src="images/NEW/logo-strip-6_600x500.png" alt="Inspiration Photographers" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
     </div>
 
-    <!-- Linha 4: To Have & To Hold — banner full width -->
-    <div style="display:flex !important;justify-content:center !important;">
-      <img src="images/NEW/logo-strip-7_1600x600.png" alt="To Have and To Hold Wedding Magazine" style="width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
+    <!-- Linha 4: To Have & To Hold — full width -->
+    <div style="display:flex !important;justify-content:center !important;width:100% !important;">
+      <img src="images/NEW/logo-strip-7_1600x600.png" alt="To Have and To Hold Wedding Magazine" style="width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;transform:scale(1.4) !important;transform-origin:center center !important;margin:20px 0 !important;"/>
     </div>
 
   </div>
