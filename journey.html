@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="d" lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1202,13 +1202,13 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-party::before {content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,0.72) 0%,rgba(18,16,14,0.82) 100%);pointer-events:none;}
 .journey-party__inner {position:relative;z-index:1;max-width:1320px;margin:0 auto;}
 .journey-party__header {margin:0 auto 32px;max-width:760px;text-align:center;}
-.journey-party__eyebrow {margin:0 0 16px;color:rgba(238,230,220,0.82);font-family:'Instrument Sans';font-size:12px;font-weight:500;line-height:1;letter-spacing:0.16em;text-transform:uppercase;}
-.journey-party__title {margin:0;color:rgba(252,248,243,0.96);font-family:'Instrument Serif';font-size:46px;font-weight:400;line-height:1.08;letter-spacing:-0.01em;}
+.journey-party__eyebrow {margin:0 0 16px;color:rgba(238,230,220,0.82);font-family:'Instrument Sans';font-size:12px !important;font-weight:500;line-height:1;letter-spacing:0.16em;text-transform:uppercase;}
+.journey-party__title {margin:0;color:rgba(252,248,243,0.96) !important;font-family:'Instrument Serif' !important;font-size:46px !important;font-weight:400 !important;line-height:1.08 !important;letter-spacing:-0.01em !important;}
 .journey-party__body {margin:0 auto 52px;max-width:760px;text-align:center;}
-.journey-party__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
+.journey-party__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px !important;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
 .journey-party__para:last-child {margin-bottom:0;}
 .journey-party__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;}
+.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;max-height:400px;}
 .journey-party__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 420ms ease;}
 .journey-party__item:hover .journey-party__photo {transform:scale(1.03);}
 
@@ -1732,7 +1732,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <img class="journey-family__photo" src="https://i.postimg.cc/rmXGzkdH/Paige-Connor-582.jpg" alt="Family portrait with natural light"/>
 </figure>
 <figure class="journey-family__item">
-<img class="journey-family__photo" src="https://i.postimg.cc/9M5Pzh48/Patrick-Samantha-440.jpg" alt="Joyful family group photograph"/>
+<img class="journey-family__photo" src="https://i.postimg.cc/bYCN369W/Patrick-Samantha-382.jpg" alt="Joyful family group photograph"/>
 </figure>
 </div>
 </div>
@@ -1741,7 +1741,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <section class="journey-testimonial-4" aria-labelledby="journey-testimonial-4-author">
 <div class="journey-testimonial-4__inner">
 <figure class="journey-testimonial-4__media">
-<img class="journey-testimonial-4__image" src="images/patrick-samanta.png" alt="Patrick and Samantha on their wedding day"/>
+<img class="journey-testimonial-4__image" src="https://i.postimg.cc/bYCN369W/Patrick-Samantha-382.jpg" alt="Patrick and Samantha on their wedding day"/>
 </figure>
 <div class="journey-testimonial-4__quote">
 <span class="journey-testimonial-4__mark" aria-hidden="true">&ldquo;</span>
@@ -1810,7 +1810,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p class="journey-party__para">Let&rsquo;s raise a glass to your love.</p>
 <p class="journey-party__para">After the vows are spoken, we&rsquo;ll be surrounded by those who matter most &mdash; hearts full, smiles wide, and a celebration to remember.</p>
 </div>
-<div class="journey-party__grid">
+<div class="journey-party__grid" style="display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;">
 <figure class="journey-party__item">
 <img class="journey-party__photo" src="https://i.postimg.cc/T1T4LmyB/Abbie-Lee-1476.jpg" alt="Joyful wedding reception moment"/>
 </figure>
