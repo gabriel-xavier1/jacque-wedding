@@ -1,4 +1,4 @@
-﻿  <!DOCTYPE html>
+  <!DOCTYPE html>
   <html class="d" lang="en">
     <head>
       <meta charset="UTF-8" />
@@ -110,7 +110,22 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(41,38,36,0.55) 100%);
+    background: transparent;
+  }
+  #navbar-custom::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    background-origin: border-box;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(41,38,36,0.8) 100%);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #navbar-custom .nav-inner {
+    position: relative;
+    z-index: 1;
   }
   #navbar-custom .nav-inner {
     max-width: 1200px;
@@ -155,10 +170,10 @@
 
   /* TABLET (≤1024px) */
   @media (max-width: 1024px) {
-    #navbar-custom .nav-inner { height: 80px; padding: 0 20px; }
+    #navbar-custom .nav-inner { height: 100px; padding: 0 20px; }
     #navbar-custom .nav-left, #navbar-custom .nav-right { gap: 24px; }
-    #navbar-custom a.nav-link { font-size: 11px; letter-spacing: 0.12em; }
-    #navbar-custom .nav-logo img { height: 56px; }
+    #navbar-custom a.nav-link { font-size: 12px; letter-spacing: 0.18em; }
+    #navbar-custom .nav-logo img { height: 68px; }
   }
 
   /* MOBILE (≤768px) */
@@ -247,14 +262,14 @@
   .d .sib-hero {height:724px;}
   .m .sib-hero .ss-bg {
     background-color:rgba(41,38,36,1);
-    background-image: url('https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg');
+    background-image: url('images/Amber&Max-83.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .d .sib-hero .ss-bg {
     background-color:rgba(41,38,36,1);
-    background-image: url('https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg');
+    background-image: url('images/Amber&Max-83.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1207,70 +1222,37 @@
   .stats-cards__value {margin:0;color:#2a2723;font-family:'Instrument Serif', Georgia, 'Times New Roman', serif;font-size:64px;font-weight:400;line-height:1;letter-spacing:-0.02em;}
   .stats-cards__label {margin:12px 0 0;color:#5a524a;font-family:'Instrument Sans', Arial, sans-serif;font-size:12px;font-weight:500;line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;}
 
-  /* ===== Logos roll (desktop) ===== */
   .logos-roll {background:#2f2c26;padding:52px 0;overflow:hidden;}
   .logos-roll__inner {max-width:none;margin:0 auto;}
   .logos-roll__marquee {display:flex;align-items:center;justify-content:center;width:100%;}
-  .logos-roll__strip {display:block;height:auto;width:1200px;max-width:none;opacity:0.88;transform:none;transform-origin:center;}
   .logos-roll__mobile {display:none;}
-  @media (min-width: 768px) {
-    .logos-roll__mobile {display:none !important;}
-  }
-  @media (max-width: 767px) {
-    .logos-roll__mobile {display:flex !important;}
-  }
-  .m .logos-roll__mobile {display:flex !important;}
+  .logos-roll__strip {display:block;
+    height:auto;width:auto;max-width:none;
+    opacity:0.88;transform:scale(0.67);
+    transform-origin:center;}
 
   @media (max-width: 767px) {
-    .logos-roll {padding:32px 0 !important;overflow:hidden !important;background:#31302b !important;}
+    .logos-roll {padding:28px 0 !important;overflow:hidden !important;background:#31302b !important;}
     .logos-roll__marquee {display:none !important;}
     .logos-roll__mobile {
-      display:flex !important;
-      flex-direction:column !important;
-      align-items:stretch !important;
-      gap:20px !important;
+      display:grid !important;
+      grid-template-columns:1fr 1fr !important;
+      gap:12px !important;
       width:100% !important;
-      padding:0 20px !important;
+      padding:0 16px !important;
       box-sizing:border-box !important;
     }
-    /* Badges circulares lado a lado */
-    .logos-roll__mobile-badges {
-      display:flex !important;
-      flex-direction:row !important;
-      justify-content:center !important;
-      align-items:center !important;
-      gap:16px !important;
-    }
-    .logos-roll__mobile-badges img {
-      width:42% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      opacity:0.92 !important;
-      display:block !important;
-    }
-    /* Wedding Industry Awards — portrait, centralizado */
-    .logos-roll__mobile-finalist {
-      display:flex !important;
-      justify-content:center !important;
-    }
-    .logos-roll__mobile-finalist img {
-      width:52% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      opacity:0.92 !important;
-      display:block !important;
-    }
-    /* Strips wide — full width */
-    .logos-roll__mobile-strip {
-      display:flex !important;
-      justify-content:center !important;
-    }
-    .logos-roll__mobile-strip img {
+    .logos-roll__mobile img {
       width:100% !important;
       height:auto !important;
       object-fit:contain !important;
-      opacity:0.92 !important;
+      opacity:0.9 !important;
       display:block !important;
+    }
+    .logos-roll__mobile img:last-child {
+      grid-column:1 / -1 !important;
+      max-width:50% !important;
+      margin:0 auto !important;
     }
   }
 
@@ -1452,7 +1434,9 @@
 
     .logos-roll {padding:38px 0;}
     .logos-roll__marquee {display:none !important;}
-    .logos-roll__mobile {display:none !important;}
+    .logos-roll__mobile {display:grid !important;grid-template-columns:1fr 1fr !important;gap:12px !important;width:100% !important;padding:0 16px !important;box-sizing:border-box !important;}
+    .logos-roll__mobile img {width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.9 !important;display:block !important;}
+    .logos-roll__mobile img:last-child {grid-column:1 / -1 !important;max-width:50% !important;margin:0 auto !important;}
   }
 
         
@@ -1577,73 +1561,6 @@ img {
 /* Fix prev arrow direction on desktop */
 .d .sie-testimonials_r-y19MSMR_1 svg {
   transform: rotate(180deg) !important;
-}
-
-/* ===== HERO: centralizar texto no mobile ===== */
-@media (max-width: 767px) {
-  /* Esconde os elementos originais do Showit no mobile */
-  .m .sie-hero_0,
-  .m .sie-hero_1,
-  .m .sie-hero_2 {
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-  /* Mostra o overlay centralizado */
-  .hero-mobile-overlay {
-    display: flex !important;
-  }
-}
-/* Overlay escondido por padrão */
-.hero-mobile-overlay {
-  display: none;
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  pointer-events: none;
-}
-.hero-mobile-overlay h1 {
-  margin: 0 0 4px 0;
-  color: #fff;
-  font-family: 'Instrument Sans', Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1.1;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-.hero-mobile-overlay h2 {
-  margin: 0 0 20px 0;
-  color: #fff;
-  font-family: 'Allura', cursive;
-  font-size: 52px;
-  font-weight: 400;
-  line-height: 1;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-.hero-mobile-overlay a {
-  pointer-events: auto;
-  text-decoration: none;
-}
-.hero-mobile-overlay button {
-  background: #c6a07c !important;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75em 2.5em !important;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: 'Instrument Sans', Arial, sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
 /* ===== TABLET: About section only (800px - 1024px) ===== */
@@ -1937,9 +1854,10 @@ img {
   }
 
   /* ===== LOGOS strip — mobile e tablet ===== */
+  /* Mobile: logos empilhados em 3 linhas */
   @media (max-width: 767px) {
     .logos-roll {
-      padding: 32px 0 !important;
+      padding: 28px 0 !important;
       overflow: hidden !important;
       background: #31302b !important;
     }
@@ -1954,52 +1872,25 @@ img {
       display: none !important;
     }
     .logos-roll__mobile {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 20px !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: auto auto !important;
+      gap: 12px !important;
       width: 100% !important;
-      padding: 0 20px !important;
+      padding: 0 16px !important;
       box-sizing: border-box !important;
     }
-    /* Badges circulares lado a lado */
-    .logos-roll__mobile-badges {
-      display: flex !important;
-      flex-direction: row !important;
-      justify-content: center !important;
-      align-items: center !important;
-      gap: 16px !important;
-    }
-    .logos-roll__mobile-badges img {
-      width: 42% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.92 !important;
-      display: block !important;
-    }
-    /* Wedding Industry Awards — portrait, centralizado */
-    .logos-roll__mobile-finalist {
-      display: flex !important;
-      justify-content: center !important;
-    }
-    .logos-roll__mobile-finalist img {
-      width: 52% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      opacity: 0.92 !important;
-      display: block !important;
-    }
-    /* Strips wide — full width */
-    .logos-roll__mobile-strip {
-      display: flex !important;
-      justify-content: center !important;
-    }
-    .logos-roll__mobile-strip img {
+    .logos-roll__mobile img {
       width: 100% !important;
       height: auto !important;
       object-fit: contain !important;
-      opacity: 0.92 !important;
+      opacity: 0.9 !important;
       display: block !important;
+    }
+    .logos-roll__mobile img:last-child {
+      grid-column: 1 / -1 !important;
+      max-width: 50% !important;
+      margin: 0 auto !important;
     }
   }
 
@@ -2008,49 +1899,25 @@ img {
     display: none !important;
   }
   .m .logos-roll__mobile {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 24px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 12px !important;
     width: 100% !important;
-    padding: 0 24px !important;
+    padding: 0 16px !important;
     box-sizing: border-box !important;
   }
-  .m .logos-roll__mobile-badges {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 16px !important;
-  }
-  .m .logos-roll__mobile-badges img {
-    width: 42% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    opacity: 0.92 !important;
-    display: block !important;
-  }
-  .m .logos-roll__mobile-finalist {
-    display: flex !important;
-    justify-content: center !important;
-  }
-  .m .logos-roll__mobile-finalist img {
-    width: 52% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    opacity: 0.92 !important;
-    display: block !important;
-  }
-  .m .logos-roll__mobile-strip {
-    display: flex !important;
-    justify-content: center !important;
-  }
-  .m .logos-roll__mobile-strip img {
+  .m .logos-roll__mobile img {
     width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
-    opacity: 0.92 !important;
+    opacity: 0.9 !important;
     display: block !important;
+  }
+  .m .logos-roll__mobile img:last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
   }
 
   /* Tablet: imagem cabe na viewport */
@@ -2066,8 +1933,8 @@ img {
     }
     .logos-roll__strip {
       transform: none !important;
-      width: 1200px !important;
-      max-width: none !important;
+      width: 100% !important;
+      max-width: 100vw !important;
       height: auto !important;
       object-fit: contain !important;
       opacity: 0.88 !important;
@@ -2127,22 +1994,6 @@ img {
 <style>
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Remove tap highlight azul em todos os elementos clicáveis */
-  *, *:focus, *:active {
-    -webkit-tap-highlight-color: transparent !important;
-    outline: none;
-  }
-  a, button, [role="button"] {
-    -webkit-tap-highlight-color: transparent !important;
-    outline: none;
-  }
-  a:focus, a:active,
-  button:focus, button:active {
-    outline: none !important;
-    box-shadow: none !important;
-    -webkit-tap-highlight-color: transparent !important;
   }
 
   /* Paragraph mobile: Showit usa classe .m no <html>, não media query
@@ -2239,31 +2090,6 @@ img {
   </div>
   </div>
 
-  <!-- Hamburguer mobile customizado -->
-  <button id="custom-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Menu mobile overlay -->
-  <div id="mobile-nav">
-    <button id="mobile-nav-close" aria-label="Fechar">✕</button>
-    <a href="#hero" onclick="document.getElementById('mobile-nav').classList.remove('open')">Home</a>
-    <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('open')">About</a>
-    <a href="#manual-posts" onclick="document.getElementById('mobile-nav').classList.remove('open')">Galleries</a>
-    <a href="#wedding" onclick="document.getElementById('mobile-nav').classList.remove('open')">Wedding</a>
-    <a href="#freebie" onclick="document.getElementById('mobile-nav').classList.remove('open')">Investment</a>
-  </div>
-
-  <script>
-    (function() {
-      var btn = document.getElementById('custom-hamburger');
-      var nav = document.getElementById('mobile-nav');
-      var close = document.getElementById('mobile-nav-close');
-      if (btn) btn.addEventListener('click', function() { nav.classList.add('open'); });
-      if (close) close.addEventListener('click', function() { nav.classList.remove('open'); });
-    })();
-  </script>
-
   <!--make this menu always on the top while scrolling
   but  the background  has to turn to  black after scrolling otherwise it should be transparent-->
 
@@ -2278,87 +2104,6 @@ img {
 
     #header.scrolled {
       background-color: black;
-    }
-
-    /* Esconde links de nav no mobile — hamburguer já existe no Showit */
-    @media (max-width: 767px) {
-      .sie-header_1, .sie-header_2, .sie-header_3,
-      .sie-header_4, .sie-header_5, .sie-header_6 {
-        display: none !important;
-      }
-      /* Mostra hamburguer customizado */
-      #custom-hamburger {
-        display: flex !important;
-      }
-    }
-    .m .sie-header_1, .m .sie-header_2, .m .sie-header_3,
-    .m .sie-header_4, .m .sie-header_5, .m .sie-header_6 {
-      display: none !important;
-    }
-    .m #custom-hamburger {
-      display: flex !important;
-    }
-
-    /* Hamburguer */
-    #custom-hamburger {
-      display: none;
-      position: fixed;
-      top: 14px;
-      right: 16px;
-      z-index: 9999;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      background: transparent;
-      border: none;
-    }
-    #custom-hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-    #custom-hamburger.scrolled span {
-      background: #fff;
-    }
-
-    /* Menu mobile overlay */
-    #mobile-nav {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(26,22,18,0.97);
-      z-index: 9998;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-    }
-    #mobile-nav.open {
-      display: flex;
-    }
-    #mobile-nav a {
-      color: #fff;
-      font-family: 'Instrument Sans', Arial, sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-    #mobile-nav-close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-      line-height: 1;
     }
   </style>
 
@@ -2378,19 +2123,19 @@ img {
   <a href="#manual-posts" target="_self" class="sie-header_3 se" data-sid="header_3">
   <nav class="se-t sie-header_3-text st-m-subheading st-d-subheading">galleries</nav>
   </a>
-  <!-- <a href="/services/" target="_self" class="sie-header_4 se" data-sid="header_4">
+  <!-- <a href="services.html" target="_self" class="sie-header_4 se" data-sid="header_4">
   <nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">services</nav>
   </a> -->
   <a href="#wedding" target="_self" class="sie-header_4 se" data-sid="header_4">
   <nav class="se-t sie-header_4-text st-m-subheading st-d-subheading">wedding</nav>
   </a>
-  <!-- <a href="/blog/" target="_self" class="sie-header_5 se" data-sid="header_5">
+  <!-- <a href="blog.html" target="_self" class="sie-header_5 se" data-sid="header_5">
   <nav class="se-t sie-header_5-text st-m-subheading st-d-subheading">blog</nav>
   </a> -->
   <a href="#freebie" target="_self" class="sie-header_5 se" data-sid="header_5">
   <nav class="se-t sie-header_5-text st-m-subheading st-d-subheading">investment</nav>
   </a>
-  <!-- <a href="/contact/" target="_self" class="sie-header_6 se" data-sid="header_6">
+  <!-- <a href="contact.html" target="_self" class="sie-header_6 se" data-sid="header_6">
   <nav class="se-t sie-header_6-text st-m-subheading st-d-subheading">contact</nav>
   </a> -->
   <div class="str-id" data-tran="header_7">
@@ -2427,7 +2172,7 @@ img {
   
   </div>
   <div data-sid="hero_2" class="sie-hero_2 se se-pc">
-    <a href="/journey/" target="_blank" class="elegant-cta-link">
+    <a href="journey.html" target="_blank" class="elegant-cta-link">
       <button type="button" aria-label="Let's do it?" class="se-button st-primary elegant-cta-btn" style="padding-top:0.75em !important;padding-bottom:0.75em !important;">
         <span class="st-m-primary st-d-primary" style="display:block;text-align:center;">Let's do it?</span>
       </button>
@@ -2527,7 +2272,6 @@ img {
   </div>
   </div>
   </div>
-
   <section class="journey-editorial" aria-labelledby="journey-editorial-title">
   <div class="journey-editorial__inner">
   <p class="journey-editorial__eyebrow">First Things First....</p>
@@ -2593,7 +2337,7 @@ img {
       <br>
       <p class="journey-testimonial__text" style="margin:0;">I’m Jacque – documentary wedding<br>photographer, professional<br>vibe-reader, and unapologetic romantic.<br>I believe that after the wedding, what actually matters isn’t the<br>chair covers or the timeline running perfectly.<br>It’s the feeling.<br>The way you looked at each other.<br>The way your mum cried.<br>The way your friends reacted during the speeches.<br>My job isn’t to stage your love story.<br>It’s to document it as it really happens – and make sure you<br>never forget how it felt to be that in love.</p>
       <!-- <div class="journey-testimonial__cta-wrap">
-      <a href="/about/" target="_self" class="journey-testimonial__cta-link"><span type="button" aria-label="get to know me" class="se-button st-primary"><span class="st-m-primary st-d-primary">get to know me</span></span></a>
+      <a href="about.html" target="_self" class="journey-testimonial__cta-link"><span type="button" aria-label="get to know me" class="se-button st-primary"><span class="st-m-primary st-d-primary">get to know me</span></span></a>
       </div> -->
     </div>
   </div>
@@ -2730,7 +2474,7 @@ img {
      also make it more visible by adding a border . ≈ -->
       <!--make the text visible-->
 
-  <a href="/journey/" target="_blank" class="journey-testimonial-2__cta-link">  
+  <a href="journey.html" target="_blank" class="journey-testimonial-2__cta-link">  
     <button type="button" aria-label="Journey" class="se-button st-primary"><span class="st-m-primary st-d-primary">The Journey</span></button></a></div><div data-sid="freebie_2" class="sie-freebie_2 se">
     <style>
       .btn-square {
@@ -2829,12 +2573,12 @@ img {
 
   </section>
 
-<section id="contact-form" class="contact-form-section" style="display:none; background: url('https://i.postimg.cc/DZ7nPqPK/Martha-Matt-948.jpg') bottom center/cover no-repeat; position:relative; z-index:10;">
-  <div style="max-width:520px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:80px 24px 80px;box-sizing:border-box;">
+<section id="contact-form" class="contact-form-section" style="display:none; background: url('images/Martha&Matt-948.jpg') center top/cover no-repeat; position:relative; z-index:10;">
+  <div style="max-width:740px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:80px 24px 80px;box-sizing:border-box;">
     <h2 style="font-family:'Instrument Serif',serif;font-size:3rem;font-weight:400;font-style:italic;color:#1a1a1a;margin:0 0 48px 0;padding:0;text-align:center;width:100%;display:block;line-height:1.2;">
       Let's do this?
     </h2>
-    <iframe height="900" style="width:100%;max-width:520px;border:0;display:block;margin:0 auto;" id="sn-form-dlg0g"
+    <iframe height="926" style="width:100%; max-width:740px; border:0; display:block; margin:0 auto;" id="sn-form-dlg0g"
       src="https://app.studioninja.co/contactform/parser/0a800fc9-9c28-1786-819c-38b196c221ca/0a800fc9-9c28-1786-819c-38b196d821cc"
       allowfullscreen>
     </iframe>
@@ -2849,13 +2593,12 @@ img {
   }
   #contact-form.contact-form-section {
     position: relative;
-    background-position: bottom center;
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f6f3ee;
     height: auto;
     min-height: unset;
-    width: 100%;
   }
   #contact-form.contact-form-section::before {
     content: '';
@@ -2881,35 +2624,13 @@ img {
   </script>
   <section class="logos-roll" aria-label="Awards and publications logos" style="background:#31302b;">
   <div class="logos-roll__inner">
-  <!-- Desktop/tablet: imagem única em strip -->
-  <div class="logos-roll__marquee logos-roll__desktop">
-  <img class="logos-roll__strip" src="https://i.postimg.cc/vm0x9H5q/logos-strip.png" alt="Awards and publications logos strip"/>
+  <div class="logos-roll__marquee">
+  <img class="logos-roll__strip" src="images/logos/logos-strip.png" alt="Awards and publications logos strip"/>
   </div>
-  <div class="logos-roll__mobile" style="flex-direction:column !important;align-items:stretch !important;gap:28px !important;width:100% !important;padding:0 !important;box-sizing:border-box !important;">
-
-    <!-- Linha 1: Badges circulares lado a lado -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:16px !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/N0ymFcWZ/logo-strip-1-600x500.png" alt="Best of Bridebook Award 2026" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/7LC0hkpd/logo-strip-2-600x500.png" alt="Gold Award 2024" style="width:44% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 2: Wedding Industry Awards portrait, menor e centralizado -->
-    <div style="display:flex !important;justify-content:center !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/cJKwCSVp/logo-strip-3-1080x1920.png" alt="Wedding Industry Awards Regional Finalist 2026" style="width:28% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 3: Bride Association + This is Reportage + Inspiration — 3 colunas iguais -->
-    <div style="display:flex !important;flex-direction:row !important;justify-content:center !important;align-items:center !important;gap:8px !important;padding:0 20px !important;">
-      <img src="https://i.postimg.cc/R03KhBjY/logo-strip-4-600x500.png" alt="Bride Association" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/GpBGtCWw/logo-strip-5-600x500.png" alt="This is Reportage" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-      <img src="https://i.postimg.cc/43rth0g8/logo-strip-6-600x500.png" alt="Inspiration Photographers" style="width:30% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
-    <!-- Linha 4: To Have & To Hold — proporcional às outras linhas -->
-    <div style="display:flex !important;justify-content:center !important;width:100% !important;padding:0 20px !important;box-sizing:border-box !important;">
-      <img src="https://i.postimg.cc/s2tSZLrH/logo-strip-7-800x300.png" alt="To Have and To Hold Wedding Magazine" style="width:100% !important;height:auto !important;object-fit:contain !important;opacity:0.92 !important;display:block !important;"/>
-    </div>
-
+  <div class="logos-roll__mobile">
+    <img src="https://i.postimg.cc/BbdNy2nv/logo-strip-1-500x200.png" alt="Awards and publications logos row 1"/>
+    <img src="https://i.postimg.cc/mkc88mBH/logo-strip-2-500x200.png" alt="Awards and publications logos row 2"/>
+    <img src="https://i.postimg.cc/KjdQVt88/logo-strip-3-500x200.png" alt="Awards and publications logos row 3"/>
   </div>
   </div>
   </section>
@@ -3211,171 +2932,6 @@ img {
       
       
       <!-- 8_ztnrncg2pb7dkkxphlvg/20260309111713Swd855v/hw1btCl9c -->
-
-  <script>
-    /* Hero mobile centering — runs after Showit renders */
-    (function centerHeroMobile() {
-      if (window.innerWidth > 767) return;
-      function applyCenter() {
-        var heroBlock = document.querySelector('[data-bid="hero"]');
-        if (!heroBlock) return;
-        // Já injetado?
-        if (heroBlock.querySelector('.hero-mobile-overlay')) return;
-
-        // Esconde elementos originais
-        var els = ['hero_0','hero_1','hero_2'];
-        els.forEach(function(id) {
-          var el = document.querySelector('[data-sid="'+id+'"]');
-          if (el) { el.style.opacity = '0'; el.style.pointerEvents = 'none'; }
-        });
-
-        // Cria overlay centralizado
-        var overlay = document.createElement('div');
-        overlay.className = 'hero-mobile-overlay';
-        overlay.style.cssText = 'position:absolute;bottom:80px;left:0;right:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;';
-        overlay.innerHTML = '<h1 style="margin:0 0 4px;color:#fff;font-family:\'Instrument Serif\',serif;font-size:42px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,0.5);">For The Real</h1>'
-          + '<h2 style="margin:0 0 24px;color:#fff;font-family:\'Allura\',cursive;font-size:80px;font-weight:400;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,0.5);">Journey</h2>'
-          + '<a href="/journey/" target="_blank" style="text-decoration:none;">'
-          + '<button style="background:#c6a07c;color:#fff;border:none;border-radius:8px;padding:0.85em 2.8em;font-size:16px;font-weight:700;font-family:\'Instrument Sans\',Arial,sans-serif;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Let\'s do it?</button>'
-          + '</a>';
-
-        heroBlock.style.position = 'relative';
-        heroBlock.appendChild(overlay);
-      }
-      applyCenter();
-      setTimeout(applyCenter, 500);
-      setTimeout(applyCenter, 1200);
-    })();
-  </script>
-
-  <!-- Hamburguer mobile — fora do Showit container -->
-  <style>
-    #mob-hamburger {
-      display: none;
-      position: fixed;
-      top: 14px;
-      right: 16px;
-      z-index: 99999;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      padding: 12px 14px;
-      background: #2d2a24;
-      border: none;
-      border-radius: 4px;
-    }
-    #mob-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      border-radius: 1px;
-    }
-    #mob-nav {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(20,17,14,0.99);
-      z-index: 999999;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 36px;
-      opacity: 0;
-      transform: translateY(-12px);
-      transition: opacity 0.35s ease, transform 0.35s ease;
-    }
-    #mob-nav.open {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #mob-nav a {
-      color: #fff;
-      font-family: 'Instrument Serif', serif;
-      font-size: 38px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0.04em;
-      text-transform: none;
-      text-decoration: none;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s;
-      -webkit-tap-highlight-color: transparent;
-      outline: none;
-    }
-    #mob-nav.open a {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #mob-nav.open a:nth-child(2) { transition-delay: 0.05s; }
-    #mob-nav.open a:nth-child(3) { transition-delay: 0.10s; }
-    #mob-nav.open a:nth-child(4) { transition-delay: 0.15s; }
-    #mob-nav.open a:nth-child(5) { transition-delay: 0.20s; }
-    #mob-nav.open a:nth-child(6) { transition-delay: 0.25s; }
-    #mob-nav a:hover { color: #c6a07c; }
-    #mob-nav a:focus, #mob-nav a:active { outline: none; color: #c6a07c; -webkit-tap-highlight-color: transparent; }
-    #mob-nav-x:focus, #mob-nav-x:active,
-    #mob-hamburger:focus, #mob-hamburger:active { outline: none; -webkit-tap-highlight-color: transparent; box-shadow: none; }
-    * { -webkit-tap-highlight-color: transparent; }
-    #mob-nav-x {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: none;
-      border: none;
-      color: #d1583b;
-      font-size: 32px;
-      cursor: pointer;
-      line-height: 1;
-      padding: 8px;
-      transition: color 0.2s;
-    }
-    #mob-nav-x:hover { color: #fff; }
-    @media (max-width: 767px) {
-      #mob-hamburger { display: flex !important; }
-    }
-    .m #mob-hamburger { display: flex !important; }
-  </style>
-
-  <button id="mob-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <div id="mob-nav">
-    <button id="mob-nav-x" aria-label="Fechar">✕</button>
-    <a href="#hero"         onclick="document.getElementById('mob-nav').classList.remove('open')">Home</a>
-    <a href="#about"        onclick="document.getElementById('mob-nav').classList.remove('open')">About</a>
-    <a href="#wedding"      onclick="document.getElementById('mob-nav').classList.remove('open')">Wedding</a>
-    <a href="#manual-posts" onclick="document.getElementById('mob-nav').classList.remove('open')">Galleries</a>
-    <a href="#freebie"      onclick="document.getElementById('mob-nav').classList.remove('open')">Investment</a>
-  </div>
-
-  <script>
-    (function(){
-      var btn = document.getElementById('mob-hamburger');
-      var nav = document.getElementById('mob-nav');
-      var x   = document.getElementById('mob-nav-x');
-      if(btn) btn.addEventListener('click', function(){
-        nav.style.display = 'flex';
-        requestAnimationFrame(function(){
-          requestAnimationFrame(function(){
-            nav.classList.add('open');
-          });
-        });
-        btn.style.display = 'none';
-      });
-      if(x) x.addEventListener('click', function(){
-        nav.classList.remove('open');
-        setTimeout(function(){ nav.style.display = 'none'; }, 350);
-        btn.style.display = 'flex';
-      });
-    })();
-  </script>
-
     </body>
 
   </html>
