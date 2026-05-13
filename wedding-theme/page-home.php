@@ -250,14 +250,14 @@
   .d .sib-hero {height:724px;}
   .m .sib-hero .ss-bg {
     background-color:rgba(41,38,36,1);
-    background-image: url('https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg');
+    background-image: url('<?php $bg = get_field("hero_background_image"); echo (is_array($bg) ? $bg["url"] : $bg) ?: "https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg"; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .d .sib-hero .ss-bg {
     background-color:rgba(41,38,36,1);
-    background-image: url('https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg');
+    background-image: url('<?php $bg = get_field("hero_background_image"); echo (is_array($bg) ? $bg["url"] : $bg) ?: "https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg"; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2420,11 +2420,11 @@ img {
   </div>
   <div class="sc" style="width:1200px">
   <div data-sid="hero_0" class="sie-hero_0 se">
-  <h1 class="se-t sie-hero_0-text st-m-heading st-d-heading se-rc">For The Real<br>
+  <h1 class="se-t sie-hero_0-text st-m-heading st-d-heading se-rc"><?php the_field('hero_heading_line_1'); ?><br>
   </h1>
   </div>
   <div data-sid="hero_1" class="sie-hero_1 se">
-    <h2 class="se-t sie-hero_1-text st-m-heading st-d-heading se-rc hero-cta-heading-space">Journey</h2>
+    <h2 class="se-t sie-hero_1-text st-m-heading st-d-heading se-rc hero-cta-heading-space"><?php the_field('hero_heading_line_2'); ?></h2>
   
   
   </div>

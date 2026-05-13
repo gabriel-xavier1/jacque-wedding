@@ -2077,6 +2077,167 @@ img {
   }
 }
 </style>
+
+<style>
+/* ===== ULTRAWIDE (≥1440px) ===== */
+/* 
+ * LIMITAÇÃO: Showit usa width:1200px inline no HTML (.sc containers).
+ * Não é possível expandir esses containers via CSS.
+ * Estratégia: aumentar alturas das seções Showit + expandir seções custom.
+ */
+@media (min-width: 1440px) {
+
+  /* ── Nav bar: expandir para usar o espaço ── */
+  #navbar-custom .nav-inner {
+    max-width: 1600px !important;
+    height: 110px !important;
+  }
+
+  /* ── Hero: mais alto para preencher o espaço vertical ── */
+  .d .sib-hero { height: 860px !important; }
+
+  /* ── Highlights: mais alto ── */
+  .d .sib-highlights { height: 780px !important; }
+
+  /* ── Testimonials: mais alto ── */
+  .d .sib-testimonials { height: 600px !important; }
+  /* Reposicionar setas: voltar para esquerda/direita originais, ajustar vertical */
+  .d .sie-testimonials_2 { left: 24px !important; top: 280px !important; }
+  .d .sie-testimonials_3 { left: 1144px !important; top: 280px !important; }
+
+  /* ── Galleries: mais alto ── */
+  .d .sib-index-manual-posts { height: 840px !important; }
+
+  /* ── Investment/Freebie: mais alto ── */
+  .d .sib-index-freebie { height: 820px !important; }
+  /* Reposicionar botão para não sobrepor o texto */
+  .d .sie-freebie_1 { top: 700px !important; }
+
+  /* ── About (Showit): mais alto ── */
+  .d .sib-about { height: 960px !important; }
+
+  /* ── Footer: mais alto ── */
+  .d .sib-footer { height: 620px !important; }
+
+  /* ── Custom sections: expandir max-width ── */
+  .journey-editorial__inner,
+  .journey-testimonial__inner,
+  .journey-testimonial-2__inner,
+  .journey-testimonial-3__inner,
+  .journey-testimonial-4__inner,
+  .journey-testimonial-5__inner,
+  .journey-video__inner,
+  .journey-gallery-4__inner,
+  .journey-family__inner,
+  .journey-portraits__inner,
+  .journey-party__inner,
+  .journey-now__inner {
+    max-width: 1560px !important;
+  }
+
+  /* ── Stats cards: expandir ── */
+  .stats-cards__inner { max-width: 1560px !important; }
+
+  /* ── Logos strip: escalar com viewport ── */
+  .logos-roll__strip { width: min(1560px, 90vw) !important; }
+
+  /* ── Padding das seções custom: mais generoso ── */
+  .journey-editorial { padding: 100px 48px 108px !important; }
+  .journey-testimonial { padding: 100px 48px 108px !important; }
+  .journey-testimonial-2,
+  .journey-testimonial-3,
+  .journey-testimonial-4,
+  .journey-testimonial-5 { padding: 100px 48px 108px !important; }
+  .journey-gallery-4,
+  .journey-gallery-5,
+  .journey-family,
+  .journey-portraits,
+  .journey-party { padding: 100px 48px 112px !important; }
+  .journey-video { padding: 52px 48px 112px !important; }
+  .journey-now { padding: 88px 48px 80px !important; }
+  .stats-cards { padding: 80px 48px !important; }
+
+  /* ── Fontes: ligeiramente maiores ── */
+  .journey-editorial__closing { font-size: 34px !important; }
+  .journey-editorial__body { font-size: 26px !important; }
+  .journey-testimonial__text,
+  .journey-testimonial-2__text,
+  .journey-testimonial-3__text,
+  .journey-testimonial-4__text,
+  .journey-testimonial-5__text { font-size: 28px !important; }
+  .journey-now__title { font-size: 70px !important; }
+  .journey-now__text { font-size: 30px !important; }
+  .stats-cards__value { font-size: 72px !important; }
+}
+
+@media (min-width: 1920px) {
+
+  /* ── Nav bar ── */
+  #navbar-custom .nav-inner {
+    max-width: 1800px !important;
+    height: 120px !important;
+  }
+
+  /* ── Showit sections: ainda mais altas ── */
+  .d .sib-hero { height: 960px !important; }
+  .d .sib-highlights { height: 860px !important; }
+  .d .sib-testimonials { height: 660px !important; }
+  .d .sie-testimonials_2 { left: 24px !important; top: 310px !important; }
+  .d .sie-testimonials_3 { left: 1144px !important; top: 310px !important; }
+  .d .sib-index-manual-posts { height: 920px !important; }
+  .d .sib-index-freebie { height: 900px !important; }
+  .d .sie-freebie_1 { top: 780px !important; }
+  .d .sib-about { height: 1040px !important; }
+  .d .sib-footer { height: 680px !important; }
+
+  /* ── Custom sections: max-width maior ── */
+  .journey-editorial__inner,
+  .journey-testimonial__inner,
+  .journey-testimonial-2__inner,
+  .journey-testimonial-3__inner,
+  .journey-testimonial-4__inner,
+  .journey-testimonial-5__inner,
+  .journey-video__inner,
+  .journey-gallery-4__inner,
+  .journey-family__inner,
+  .journey-portraits__inner,
+  .journey-party__inner,
+  .journey-now__inner {
+    max-width: 1760px !important;
+  }
+
+  .stats-cards__inner { max-width: 1760px !important; }
+  .logos-roll__strip { width: min(1760px, 88vw) !important; }
+
+  /* ── Padding ainda mais generoso ── */
+  .journey-editorial { padding: 120px 64px 128px !important; }
+  .journey-testimonial { padding: 120px 64px 128px !important; }
+  .journey-testimonial-2,
+  .journey-testimonial-3,
+  .journey-testimonial-4,
+  .journey-testimonial-5 { padding: 120px 64px 128px !important; }
+  .journey-gallery-4,
+  .journey-gallery-5,
+  .journey-family,
+  .journey-portraits,
+  .journey-party { padding: 120px 64px 132px !important; }
+  .journey-video { padding: 64px 64px 132px !important; }
+  .journey-now { padding: 100px 64px 96px !important; }
+  .stats-cards { padding: 96px 64px !important; }
+
+  /* ── Fontes: maiores ── */
+  .journey-editorial__closing { font-size: 38px !important; }
+  .journey-editorial__body { font-size: 28px !important; }
+  .journey-testimonial__text,
+  .journey-testimonial-2__text,
+  .journey-testimonial-3__text,
+  .journey-testimonial-4__text,
+  .journey-testimonial-5__text { font-size: 30px !important; }
+  .journey-now__title { font-size: 78px !important; }
+  .journey-now__text { font-size: 32px !important; }
+  .stats-cards__value { font-size: 80px !important; }
+}
+</style>
   <script>
     /* ── BLOCK ALL ZOOM ─────────────────────────────────────────── */
     (function() {

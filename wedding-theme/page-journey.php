@@ -1057,7 +1057,7 @@ html.d {background-color:rgba(255,255,255,1);}
 .d .sib-hero {height:800px;}
 .m .sib-hero {height:560px;}
 .d .sib-hero .ss-bg,
-.m .sib-hero .ss-bg {position:relative;background-color:rgba(41,38,36,1);background-image:url('https://i.postimg.cc/RFv4LcQ8/Amber-Max-83.jpg');background-size:cover;background-position:center center;}
+.m .sib-hero .ss-bg {position:relative;background-color:rgba(41,38,36,1);background-image:url('images/Amber&Max-83.jpg');background-size:cover;background-position:center center;}
 .d .sib-hero .ss-bg {background-attachment:fixed;}
 .m .sib-hero .ss-bg {background-attachment:scroll;}
 .d .sib-hero .ss-bg::before,
@@ -1205,13 +1205,13 @@ html.d {background-color:rgba(255,255,255,1);}
 .journey-party::before {content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,0.72) 0%,rgba(18,16,14,0.82) 100%);pointer-events:none;}
 .journey-party__inner {position:relative;z-index:1;max-width:1320px;margin:0 auto;}
 .journey-party__header {margin:0 auto 32px;max-width:760px;text-align:center;}
-.journey-party__eyebrow {margin:0 0 16px;color:rgba(238,230,220,0.82);font-family:'Instrument Sans';font-size:12px !important;font-weight:500;line-height:1;letter-spacing:0.16em;text-transform:uppercase;}
-.journey-party__title {margin:0;color:rgba(252,248,243,0.96) !important;font-family:'Instrument Serif' !important;font-size:46px !important;font-weight:400 !important;line-height:1.08 !important;letter-spacing:-0.01em !important;}
+.journey-party__eyebrow {margin:0 0 16px;color:rgba(238,230,220,0.82);font-family:'Instrument Sans';font-size:12px;font-weight:500;line-height:1;letter-spacing:0.16em;text-transform:uppercase;}
+.journey-party__title {margin:0;color:rgba(252,248,243,0.96);font-family:'Instrument Serif';font-size:46px;font-weight:400;line-height:1.08;letter-spacing:-0.01em;}
 .journey-party__body {margin:0 auto 52px;max-width:760px;text-align:center;}
-.journey-party__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px !important;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
+.journey-party__para {margin:0 0 22px;color:rgba(233,224,214,0.9);font-family:'Instrument Serif';font-size:22px;font-weight:400;line-height:1.54;letter-spacing:-0.002em;}
 .journey-party__para:last-child {margin-bottom:0;}
 .journey-party__grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;max-height:400px;}
+.journey-party__item {margin:0;overflow:hidden;background:#2b2621;aspect-ratio:3/2;}
 .journey-party__photo {display:block;width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform 420ms ease;}
 .journey-party__item:hover .journey-party__photo {transform:scale(1.03);}
 
@@ -1617,7 +1617,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p id="journey-testimonial-author" class="journey-testimonial__author">Sarka &amp; Joe</p>
 </div>
 <div class="journey-testimonial__media">
-<img class="journey-testimonial__image" src="https://i.postimg.cc/hjMgyfpw/sarka-joe.png" alt="Sarka and Joe at their wedding"/>
+<img class="journey-testimonial__image" src="images/sarka_joe.png" alt="Sarka and Joe at their wedding"/>
 </div>
 </div>
 </section>
@@ -1658,7 +1658,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p id="journey-testimonial-2-author" class="journey-testimonial-2__author">Herni &amp; Graham</p>
 </div>
 <figure class="journey-testimonial-2__media">
-<img class="journey-testimonial-2__image" src="https://i.postimg.cc/sX3s4p90/herni-grahan.png" alt="Herni and Graham in traditional wedding attire"/>
+<img class="journey-testimonial-2__image" src="images/herni-grahan.png" alt="Herni and Graham in traditional wedding attire"/>
 </figure>
 </div>
 </section>
@@ -1702,7 +1702,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p id="journey-testimonial-3-author" class="journey-testimonial-3__author">Jane, James&rsquo; Mom</p>
 </div>
 <figure class="journey-testimonial-3__media">
-<img class="journey-testimonial-3__image" src="https://i.postimg.cc/G2bdxkx0/jane.png" alt="Jane, mother of the groom James, at the wedding"/>
+<img class="journey-testimonial-3__image" src="images/jane.png" alt="Jane, mother of the groom James, at the wedding"/>
 </figure>
 </div>
 </section>
@@ -1744,7 +1744,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <section class="journey-testimonial-4" aria-labelledby="journey-testimonial-4-author">
 <div class="journey-testimonial-4__inner">
 <figure class="journey-testimonial-4__media">
-<img class="journey-testimonial-4__image" src="https://i.postimg.cc/bYCN369W/Patrick-Samantha-382.jpg" alt="Patrick and Samantha on their wedding day"/>
+<img class="journey-testimonial-4__image" src="images/patrick-samanta.png" alt="Patrick and Samantha on their wedding day"/>
 </figure>
 <div class="journey-testimonial-4__quote">
 <span class="journey-testimonial-4__mark" aria-hidden="true">&ldquo;</span>
@@ -1770,7 +1770,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <img class="journey-portraits__photo" src="https://i.postimg.cc/Nfq14Ybk/Eden-Tristan-908.jpg" alt="Natural portrait in golden light"/>
 </figure>
 <figure class="journey-portraits__item">
-<img class="journey-portraits__photo" src="https://i.postimg.cc/KzmxDnr0/Ema-Alex-311.jpg" alt="Joyful portrait of newlyweds"/>
+<img class="journey-portraits__photo" src="https://i.postimg.cc/mDK7KG4L/Ema-Alex-311.jpg" alt="Joyful portrait of newlyweds"/>
 </figure>
 <figure class="journey-portraits__item">
 <img class="journey-portraits__photo" src="https://i.postimg.cc/NjG2J0XJ/Charlotte-Lewis-550.jpg" alt="Couple portrait during their wedding day"/>
@@ -1796,7 +1796,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p id="journey-testimonial-5-author" class="journey-testimonial-5__author">Martha &amp; Matt</p>
 </div>
 <figure class="journey-testimonial-5__media">
-<img class="journey-testimonial-5__image" src="https://i.postimg.cc/NMQBk1kY/martha-mat.png" alt="Martha and Matt on their wedding day"/>
+<img class="journey-testimonial-5__image" src="images/martha-mat.png" alt="Martha and Matt on their wedding day"/>
 </figure>
 </div>
 </section>
@@ -1813,7 +1813,7 @@ html.d {background-color:rgba(255,255,255,1);}
 <p class="journey-party__para">Let&rsquo;s raise a glass to your love.</p>
 <p class="journey-party__para">After the vows are spoken, we&rsquo;ll be surrounded by those who matter most &mdash; hearts full, smiles wide, and a celebration to remember.</p>
 </div>
-<div class="journey-party__grid" style="display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;">
+<div class="journey-party__grid">
 <figure class="journey-party__item">
 <img class="journey-party__photo" src="https://i.postimg.cc/T1T4LmyB/Abbie-Lee-1476.jpg" alt="Joyful wedding reception moment"/>
 </figure>
@@ -1836,13 +1836,13 @@ html.d {background-color:rgba(255,255,255,1);}
 </div>
 </section>
 
-<section id="contact-form" class="contact-form-section" style="background:#f6f3ee; padding:70px 0; background: url('https://i.postimg.cc/KzmxDnr0/Ema-Alex-311.jpg') center top/cover no-repeat; position:relative; min-height:100vh; height:100vh;">
+<section id="contact-form" class="contact-form-section" style="background:#f6f3ee; padding:70px 0; background: url('https://i.postimg.cc/KzmxDnr0/Ema-Alex-311.jpg') center top/cover no-repeat; position:relative; min-height:100vh; height:auto;">
   <div style="position:absolute;inset:0;background:rgba(0,0,0,0.32);z-index:0;"></div>
-  <div style="max-width:600px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;position:relative;z-index:1;padding-top:80px;padding-bottom:80px;">
     <h2 class="se-t sie-freebie_3-text st-m-heading st-d-heading se-rc" style="font-size:3rem;font-weight:700;margin-bottom:2rem;text-align:center;width:100%;"> 
       <i>Let's do this?</i><br>
     </h2>
-    <iframe height="306" style="min-width:80%; max-width: 600px; border: 0; margin-top: 8.2rem;" id="sn-form-y4qh8"
+    <iframe height="390" style="min-width:80%; max-width: 600px; border: 0; margin-top: 0;" id="sn-form-y4qh8"
       src="https://app.studioninja.co/contactform/parser/0a800fc9-9c28-1786-819c-38b196c221ca/0a800fc9-9c28-1786-819c-38b3cfeb224e"
       allowfullscreen>
     </iframe>
